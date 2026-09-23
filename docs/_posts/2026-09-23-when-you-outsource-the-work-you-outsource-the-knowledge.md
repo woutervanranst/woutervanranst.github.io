@@ -6,7 +6,7 @@ permalink: /when-you-outsource-the-work-you-outsource-the-knowledge/
 subtitle: 'How local cost savings, change requests, and lost expertise can shift the economics and bargaining power of outsourcing.'
 ---
 
-I recently read [*Flying Blind: The 737 MAX Tragedy and the Fall of Boeing*](https://www.goodreads.com/book/show/55994102-flying-blind) that details how corporate dysfunction and outsourcing over a long period eventually produced the 737 MAX disaster. It was written in the stars that this was going to happen: in 2001, Boeing engineer L. J. Hart-Smith wrote a paper with a wonderfully blunt title: [*Out-Sourced Profits: The Cornerstone of Successful Subcontracting*](https://techrights.org/wp-content/uploads/2022/06/2014130646.pdf). His question was simple: when outsourcing reduces costs, *whose* costs are being reduced, and what happens to the cost of the whole undertaking?
+I recently read [*Flying Blind: The 737 MAX Tragedy and the Fall of Boeing*](https://www.goodreads.com/book/show/55994102-flying-blind) that details how corporate dysfunction and outsourcing over a long period eventually produced the 737 MAX disaster. It was written in the stars that this was going to happen: in 2001, Boeing engineer L. J. Hart-Smith wrote a paper with a brilliant tongue-in-cheek title: [*Out-Sourced Profits: The Cornerstone of Successful Subcontracting*](https://techrights.org/wp-content/uploads/2022/06/2014130646.pdf). His question was simple: when outsourcing reduces costs, *whose* costs are being reduced, and what happens to the cost of the whole undertaking?
 
 He was writing about aircraft. The pattern applies wherever separate teams and organizations have to deliver one outcome. A cheaper component can make the finished product more expensive. A cheaper contract can leave the customer dependent on the supplier. And the people who still understand the work tend to end up on the side doing it.
 
@@ -20,7 +20,7 @@ Hart-Smith's first graph distinguishes a local minimum from a global one. **You 
 
 ![Schematic redraw of Hart-Smith's Figure 1. Minimizing one variable gives a higher total cost than a constrained minimum, which in turn is higher than the global minimum.](/assets/posts/when-you-outsource-the-work-you-outsource-the-knowledge/local-vs-global-optima.png)
 
-*Conceptual redraw of [Figure 1 in Hart-Smith's paper](https://techrights.org/wp-content/uploads/2022/06/2014130646.pdf#page=5). The curves illustrate a relationship; they are not measured data.*
+*Local (outcourced) optima vs global optima [source](https://techrights.org/wp-content/uploads/2022/06/2014130646.pdf#page=5).*
 
 Think about a typical outsourcing decision. Procurement tries to lower the contract price. A manager tries to reduce headcount. The supplier tries to protect its margin. Each party can hit its target while the organization pays more for specification, coordination, rework, change control, integration, and the next generation of the product or service.
 
@@ -44,7 +44,7 @@ The local metric says the original contract was cheap. The global cost includes 
 
 ## The loss happens gradually
 
-The more serious cost is harder to put in a business case. It is the loss of the ability to understand and direct the work.
+The more serious cost is harder to put in a business case. It is the loss of the ability to understand and direct the work. What typically happens:
 
 1. Internal experts explain the system, the customer, and the undocumented exceptions to the supplier.
 2. The supplier does the work and learns which assumptions were wrong, which problems recur, and which apparently simple changes have awkward consequences.
