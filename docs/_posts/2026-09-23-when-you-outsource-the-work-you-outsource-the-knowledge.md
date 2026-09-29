@@ -10,7 +10,7 @@ I recently read [*Flying Blind: The 737 MAX Tragedy and the Fall of Boeing*](htt
 
 He was writing about aircraft. The pattern applies wherever separate teams and organizations have to deliver one outcome. A cheaper component can make the finished product more expensive. A cheaper contract can leave the customer dependent on the supplier. And the people who still understand the work tend to end up on the side doing it.
 
-I worked at one of the bigger IT connsulting firms, so I've seen this from the supplier side. There are quite a few parallels to be drawn.
+I worked at one of the bigger IT consulting firms, so I've seen this from the supplier side. There are quite a few parallels to be drawn.
 
 **TL;DR:** Local cost savings can raise the total cost of a complex project. Scope starts changing as soon as the work begins, 'change requests' are the name of the game. Meanwhile, the customer gradually loses the expertise needed to specify, judge, or take back the work. That is when bargaining power moves to the supplier.
 
@@ -20,7 +20,7 @@ Hart-Smith's first graph distinguishes a local minimum from a global one. **You 
 
 ![Schematic redraw of Hart-Smith's Figure 1. Minimizing one variable gives a higher total cost than a constrained minimum, which in turn is higher than the global minimum.](/assets/posts/when-you-outsource-the-work-you-outsource-the-knowledge/local-vs-global-optima.png)
 
-*Local (outcourced) optima vs global optima [source](https://techrights.org/wp-content/uploads/2022/06/2014130646.pdf#page=5).*
+*Local (outsourced) optima vs global optima [source](https://techrights.org/wp-content/uploads/2022/06/2014130646.pdf#page=5).*
 
 Think about a typical outsourcing decision. Procurement tries to lower the contract price. A manager tries to reduce headcount. The supplier tries to protect its margin. Each party can hit its target while the organization pays more for specification, coordination, rework, change control, integration, and the next generation of the product or service.
 
@@ -61,7 +61,7 @@ A few architects and managers do not automatically restore that knowledge. A dia
 
 Then the contract comes up for renewal.
 
-On paper, the customer can invite competing bids. In practice, **the incumbent knows where the bodies are buried**: the implcit decisions, the awkward interfaces, the operational shortcuts, and the risks of a transition. A new bidder needs to price the unknowns. The customer no longer knows enough to tell whose estimate is credible.
+On paper, the customer can invite competing bids. In practice, **the incumbent knows where the bodies are buried**: the implicit decisions, the awkward interfaces, the operational shortcuts, and the risks of a transition. A new bidder needs to price the unknowns. The customer no longer knows enough to tell whose estimate is credible.
 
 That is bargaining power. It doesn't require the supplier to own the intellectual property or behave badly. It is enough for the supplier to be the only party that can confidently say what a change will take and what might go wrong. Replacing them means paying someone else to relearn the system, while the business continues to depend on it.
 
@@ -73,7 +73,7 @@ Having the documentation, the code, or the contract is useful, but none of those
 
 Hart-Smith did see a case for outsourcing to specialists with better facilities and enough customers to make those facilities worthwhile. The question is whether the outside party brings a genuine capability, and whether the customer can still understand and steer the result.
 
-To avoid all of this, companies doing outsourcing still need to allow their own people to own and perform a meaningful slice of the workL investigate a failure, challenge an estimate, and explain the consequences of a design choice. Consulting companies on the other hand should budget for discovery and change instead of pretending every requirement is knowable at the start. Fixed price projects are doomed from the start imo. And at the end, I would judge the sourcing arrangement by the full cost of delivery, change, operations, and transition, including the change requests.
+To avoid all of this, companies doing outsourcing still need to allow their own people to own and perform a meaningful slice of the work investigate a failure, challenge an estimate, and explain the consequences of a design choice. Consulting companies on the other hand should budget for discovery and change instead of pretending every requirement is knowable at the start. Fixed price projects are doomed from the start imo. And at the end, I would judge the sourcing arrangement by the full cost of delivery, change, operations, and transition, including the change requests.
 
 **A useful test is to ask what happens if the incumbent supplier cannot help next month. Can the organization still make a decision, diagnose a problem, and explain the work to someone new? If the answer is no, a competitive tender at renewal time offers less choice than it appears to.**
 
