@@ -7,12 +7,6 @@ markdown: kramdown
 highlighter: rouge
 excerpt_separator: "<!--more-->"
 
-plugins:
-  - jekyll-paginate
-
-paginate: 8
-paginate_path: "/posts/page:num/"
-
 name: Wouter van Ranst
 author: Wouter van Ranst
 author_bio: Writing about architecture, distributed systems, Azure, and .NET.
