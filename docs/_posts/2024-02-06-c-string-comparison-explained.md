@@ -3,6 +3,8 @@ layout: post
 title: 'C# String Comparison Explained'
 date: 2024-02-06 06:34:00
 permalink: /c-string-comparison-explained/
+seo_title: 'C# StringComparison: Ordinal vs InvariantCulture vs CurrentCulture'
+description: 'When to use Ordinal, OrdinalIgnoreCase, InvariantCultureIgnoreCase or CurrentCulture in C#, illustrated with German "straße" and French accent examples.'
 subtitle: 'A practical guide to choosing the right C# string comparison mode for culture-sensitive, case-insensitive, and internal comparisons.'
 ---
 

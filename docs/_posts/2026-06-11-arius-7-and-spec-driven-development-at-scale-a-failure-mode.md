@@ -6,7 +6,7 @@ permalink: /arius-7-and-spec-driven-development-at-scale-a-failure-mode/
 subtitle: 'A follow-up on what spec-driven development got right, where it failed, and why domain judgment still matters.'
 ---
 
-*A follow-up to* [*Developing Arius 5 during the dawn of AI-assisted code*](https://wouteronarchitecture.medium.com/developing-arius-5-during-the-dawn-of-ai-assisted-code-473fdb05b1e6)*.*
+*A follow-up to* [*Developing Arius 5 during the dawn of AI-assisted code*](/developing-arius-5-during-the-dawn-of-ai-assisted-code/)*.*
 
 TL;DR:
 
