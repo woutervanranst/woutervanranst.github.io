@@ -8,9 +8,9 @@ subtitle: 'A 2008 internship: modelling newspaper layout as a search problem, an
 
 In the summer of 2008, between the first and second year of my Master in Computer Science (Artificial Intelligence) at KU Leuven, I did an internship at XT-i, a Java consultancy in the Cronos group. Their client, a Flemish newspaper, wanted to lay out its pages automatically.
 
-That was a long time ago, but I still tell this story in job interviews. Part of it is about modelling: the same problem took 100 days or 6 seconds depending on how I represented it. The other part I only understood years later, and it has nothing to do with algorithms.
+That was a long time ago, but I still think about this from time to time. Part of it is about modelling: the same problem took 100 days or 6 seconds depending on how I represented it. The other part I only understood years later, and it has nothing to do with algorithms.
 
-The code, the data and the internship report (in Dutch) are on GitHub: [woutervanranst/prolog](https://github.com/woutervanranst/prolog).
+The code, the data and the internship report are on GitHub: [woutervanranst/prolog](https://github.com/woutervanranst/prolog).
 
 ## The problem: the deadline is set by the layout
 
@@ -28,7 +28,7 @@ Every page starts from a master page. The yellow area in the figure below is the
 
 ![The master page: page size, type area, folio at the top, the area for articles and ads, and a strip for registration marks at the bottom.](/assets/posts/newspaper-layout-in-prolog/master-page.png)
 
-*The master page, as drawn by the newspaper (in Dutch). Red: the folio with page number and section name. Yellow: the area to fill. Blue: registration marks and measuring strips.*
+*The master page, as drawn by the newspaper.*
 
 Journalists wrote their articles in QuarkXPress, which could render each article in several shapes: wider or narrower, a different headline, and so on. Every shape is a rectangle with a width and a height. The XML combined the pages, the ads and all the article shapes.
 
@@ -40,9 +40,9 @@ So the problem is this: pick a subset of the articles, pick one shape for each, 
 
 My report lists four candidates. The first was the factory layout algorithms CRAFT, ALDEP and CORELAP, which I knew from a logistics course (*Fysieke Logistiek*, Prof. Liliane Pintelon). They plan floor area with the distance between departments as the main constraint. For newspaper articles that distance does not matter, and the algorithms do not guarantee rectangles, so I dropped them.
 
-The second was linear programming. The rules can be written as linear constraints, and the objective could be the total priority of the placed articles. The downside is that an LP solver is a black box: you cannot steer how it searches.
+The second was linear programming. The rules can be written as linear constraints, and the objective could be the total priority of the placed articles. The downside is that an LP solver is a black box: you cannot steer how it searches. Truth be told - I also didn't understand LPs that much.
 
-The third was Prolog. Prolog has backtracking built in, so once you have one layout, asking for the next one costs almost nothing.
+The third was Prolog. Prolog has [backtracking](https://en.wikipedia.org/wiki/Backtracking) built in, so once you have one layout, asking for the next one costs almost nothing.
 
 The fourth was Java. The 2008 version of me rejected it for having "too much overhead" and no backtracking. I no longer agree with that. As the rest of this post shows, the speedup came from the representation and the search strategy, and those would have worked in Java too.
 
@@ -160,10 +160,8 @@ Algorithm 1 and algorithm 2 ran in the same language on the same laptop. Going f
 
 Together with my supervisors from Cronos, I presented the results to the newspaper's IT team. Everyone agreed the numbers were impressive. Then the team, all Java developers, said: "We don't know Prolog. Nobody here can maintain this. We can't use it."
 
-I was frustrated at the time. It took me years to see that they were right. If the layout fails, the paper does not come out the next morning. You do not run that on a language nobody in the building can read, debug or extend, and that you cannot hire for. And the one person who understood the code was an intern who would be gone by September.
+I was confused about that at the time. It took me years to see that they were right. If the layout fails, the paper does not come out the next morning. You do not run that on a language nobody in the team understands.
 
 [Choose Boring Technology](/choose-boring-technology/) describes this well. Every organization can afford only a few "innovation tokens", and a niche language in a critical process uses up a lot of them. Most of that cost shows up in the years of maintenance after the first version.
 
-There was a middle ground, and I did not see it then. None of the ideas depend on Prolog: anchor points, the fit heuristic, greedy instead of complete search, a fixed article order to cut down the search space. Prolog made it quick for me to find and try them, but the Java team could have built them in Java. Backtracking would have taken more code, but they would have owned it. I only looked at the speed; they were thinking about maintenance.
-
-The code is on GitHub: [woutervanranst/prolog](https://github.com/woutervanranst/prolog). The README explains every file, and the commits carry the original 2008 file dates.
+With the power of hindsight, there was a middle ground. None of the ideas depend on Prolog: anchor points, the fit heuristic, greedy instead of complete search, a fixed article order to cut down the search space. Prolog made it quick for me to find and try them, but the Java team could have built them in Java. Backtracking would have taken more code, but they would have owned it.
