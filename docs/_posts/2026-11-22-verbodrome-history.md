@@ -6,21 +6,21 @@ permalink: /verbodrome-history/
 subtitle: 'From an Excel macro in 2001 to a rule-based conjugation engine in 2026, and every technology I tried out in between.'
 ---
 
-In September 2001, in the fourth year of secondary school, I had to learn the *Bescherelle* by heart. The Bescherelle is the little French book with a conjugation table for every model verb, and our French teachers wanted us to know the irregular ones cold. I found it more fun to write a program that would quiz me than to learn the verbs.
+In September 2001, in the fourth year of secondary school, I had to learn the *Bescherelle* by heart. The Bescherelle is the little French book with a conjugation table for every model verb, and our French teachers wanted us to know it by heart. I thought it was the perfect excuse to *write a program that would quiz me* rather than learn the verbs.
 
 ![The green Bescherelle, La Conjugaison pour tous, published by Hatier.](/assets/posts/verbodrome/bescherelle-book.jpg)
 
-*The book we had to learn by heart. I scanned it in 2002 for the manual of version 6.*
+*The book we had to learn by heart.*
 
 That program kept me busy, on and off, for 25 years. It started as an Excel macro, became a Visual Basic 6 application, a .NET client/server system for the classroom, a ClickOnce desktop app, a Windows 8 Store app, a game called Angry Verbs, a couple of web apps and, this year, a conjugation engine. Every rewrite was an excuse to try a technology I wanted to learn, so in hindsight it is a decent portfolio of how I learned to program.
 
-I dug up the old backup DVDs, my mail archive from 1997 to 2007 and a handful of later repositories, and put every version I could find in one repository: [woutervanranst/verbodrome6](https://github.com/woutervanranst/verbodrome6).
+I dug up the old backups, my mail archive from 1997 to 2007 and a handful of later repositories, and put every version I could find in one repository: [woutervanranst/verbodrome6](https://github.com/woutervanranst/verbodrome6).
 
 ## Before Verbodrome: Blue
 
 I started programming in DOS batch files when I was seven. By 1999 I was writing Visual Basic under the alias *Vengakid* (the Vengaboys were big) and reading the computer magazine *Netwerk*, which I called *mijn lijfblad*, my bible. Four years later that magazine would write about me.
 
-In 2000 my nickname was BlueBoy, and the programs I wrote with a few classmates needed a publisher. So we invented one: *Blue®*. The logo was a blue square with the name in white in the bottom-left corner. That was a straight copy of Orange, the third mobile operator in Belgium at the time after Proximus and Mobistar (KPN Orange, renamed BASE in 2002), with the colour changed. I thought that was very clever.
+In 2000 my nickname was BlueBoy, and the programs I wrote with a few classmates needed a publisher. So we invented one: *Blue®*. The logo was a blue square with the name in white in the bottom-left corner. It was a play on the then just-launched third mobile operator in Belgium, Orange (after Proximus and Mobistar). It was an ad in the bus stop I took to school. I changed the color and the name and I thought that was very clever.
 
 ![The Orange logo: an orange square with the name in white in the bottom-left corner.](/assets/posts/verbodrome/orange-logo.png)
 
@@ -312,7 +312,7 @@ npm run cli -- nl zorpen --mood indicative --tense past --person 1 --number sing
 # ik zorpte
 ```
 
-The trainer on top of it is a static site. You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
+The trainer on top of it is a static site, and you can try it at [wouteronarchitecture.com/verbodrome](https://wouteronarchitecture.com/verbodrome/). You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
 
 ![Verbodrome 2026: the Dutch prompt "ik heb" over Paris, with ten French answer cards.](/assets/posts/verbodrome/verbodrome-2026-question.jpg)
 
