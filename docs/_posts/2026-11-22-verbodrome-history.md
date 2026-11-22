@@ -98,7 +98,7 @@ On 9 February I mailed my whole class: "GERAAK JE OOK HELEMAAL IN DE KNOOP VAN D
 
 ![The Verbodrome 6 package: a binder with the Blue logo and a CD with the round V logo.](/assets/posts/verbodrome/verbodrome-6-package.jpg)
 
-*The deluxe edition: a binder with a printed manual and a CD.*
+*The deluxe edition: a binder with a printed manual and a CD. That's how it was done back then.*
 
 During 2003 the VB6 code grew from about 4,400 to almost 9,000 lines. Teachers could create exercise series and verb lists and hand them out to their pupils as files, there was a score report with a mark out of 20, an autorun CD, a 30-day trial and licence keys. Version 6.5 (October 2003) was a rewrite around classes, the folder of the build before it is called *Laatste Niet-OOP*, the last non-object-oriented one. The last VB6 release was 6.6, in January 2004. All of it is in [`02-vb6`](https://github.com/woutervanranst/verbodrome6/tree/v6.6/02-vb6), and `git diff v6.4 v6.5 -- 02-vb6` shows the rewrite.
 
@@ -171,9 +171,9 @@ CS: AUTH_KEY 2EF13A0B
 SC[0]: AUTH_AUTHENCITATED USERNBR 1 BUILD BETA
 ```
 
-"De eerste communicatie tussen Verbodrome-server en Verbodrome-client: de aanmeldprocedure!!!!!" (The first communication between Verbodrome server and client: the login procedure!) The spelling of `AUTHENCITATED` is original.
+"De eerste communicatie tussen Verbodrome-server en Verbodrome-client: de aanmeldprocedure!!!!!" (The first communication between Verbodrome server and client: the login procedure!) The spelling of `AUTHENCITATED` is original. Authentication is hard.
 
-Danny had told me: "VB6 is over, .NET Framework and C# are the new kids on the block." So naturally I wanted to try that, and in the summer of 2004, after my final exams, I rewrote everything in C# on .NET 1.1: Verbodrome 7 for the pupils, Verboserve 7 for the teacher, and a shared library, *Verbosystem*, code name *Bellerophone*, a reference to *Mission: Impossible 2*. It used .NET Remoting over TCP. The pupil's session lived on the server as a `MarshalByRefObject`, and the client was "only a thin shell" that showed what the server sent. The draft website said: "Twee jaar expertise. Een half jaar ontwerptafel. Een maand ontwikkeling. Verbodrome 7 is een feit." (Two years of expertise. Half a year at the drawing board. One month of development.)
+Danny had told me: "VB6 is over, .NET Framework and C# are the new kids on the block." So naturally I wanted to try that, and in the summer of 2004, after my final exams, I rewrote everything in C# on .NET 1.1: Verbodrome 7 for the pupils, Verboserve 7 for the teacher, and a shared library, *Verbosystem*, code name *Bellerophone* (a reference to *Mission: Impossible 2*). It used .NET Remoting over TCP. The pupil's session lived on the server as a `MarshalByRefObject`, and the client was "only a thin shell" that showed what the server sent. The draft website said: "Twee jaar expertise. Een half jaar ontwerptafel. Een maand ontwikkeling. Verbodrome 7 is een feit." (Two years of expertise. Half a year at the drawing board. One month of development.)
 
 ![Verboserve 7: per pupil the list of questions with right and wrong answers, coloured from red to green, and a table per tense.](/assets/posts/verbodrome/verboserve-7-session-report.png)
 
@@ -251,15 +251,13 @@ There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, a
 
 *Angry Verbs: the logo (2014), the game modes and the campaign.*
 
-The photo for German was a Berlin skyline at dusk. I found it by googling "Berlin", where it was the fourth result, and it appeared on hundreds of other sites without any copyright notice. In 2015 a letter came from a Berlin lawyer (dare I say ][extortionist](https://hoesmann.legal/bickel-copyright-infringement-warning/)) at Photoclaim, on behalf of the photographer. By July 2015 the claim was €1,253, with a calculation of what a court case at the District Court of Berlin would cost on top.
-
-I took the site down and negotiated and settled for €200.
+The photo for German was a Berlin skyline at dusk. I found it by googling "Berlin", where it was the fourth result, and it appeared on hundreds of other sites without any copyright notice. In 2015 a letter came from a Berlin lawyer (dare I say [extortionist](https://hoesmann.legal/bickel-copyright-infringement-warning/)) at Photoclaim, on behalf of the photographer. By July 2015 the claim was €1,253, with a calculation of what a court case at the District Court of Berlin would cost on top. I took the site down and, after a lot of stress and my first contact with a real lawyer, settled for €200.
 
 Looking back, it is a bit ridiculous: €200 for a photo, and the end of a project I had carried since secondary school. I didn't put Angry Verbs back online.
 
 ## 2020: VerbodromeX
 
-During the 2020 lockdowns pupils were practising at home, and I picked it up once more. VerbodromeX ran on `verbodrome.eu`: ASP.NET Core 3.1 Razor Pages, Entity Framework Core (the `DbContext` was still called `AngryVerbsContext`), Azure App Service with a pre-production slot to swap, Azure AD B2C with school and class as sign-up attributes, Application Insights, and a Let's Encrypt certificate I had to renew by hand. The parsers now scraped seven languages.
+During the 2020 lockdowns pupils were practising at home, and I picked it up once more. For some time, I wanted to give .NET Core a spin, but the pre-3.0 versions were lacking in authentication. VerbodromeX ran on `verbodrome.eu`: ASP.NET Core 3.1 Razor Pages, Entity Framework Core, an Azure App Service with swap slots, Azure AD B2C, Application Insights, and a Let's Encrypt certificate I had to renew by hand. The parsers now scraped seven languages.
 
 Two things were new. Questions became multiple choice, asked from a Dutch prompt. And the score page analysed your mistakes: *Deze tijden verwar je regelmatig*, these tenses you mix up regularly. That was an idea from a mind map I drew in February 2003 and never built.
 
@@ -269,13 +267,13 @@ Two things were new. Questions became multiple choice, asked from a Dutch prompt
 
 *VerbodromeX, October 2020.*
 
-I mailed it to a few language teachers ("Met Verbodrome geen getreur"). The last code commits are from October 2020. After that my pet project became [Arius](/developing-arius-5-during-the-dawn-of-ai-assisted-code/).
+I mailed it to a few language teachers ("Met Verbodrome geen getreur"). The last code commits are from October 2020. Deeply convinced that nobody wants to spend money on training verbs, I came up with a new pet project, [Arius](/developing-arius-5-during-the-dawn-of-ai-assisted-code/).
 
 ## 2026: an engine, finally
 
-All this time the conjugations were data. Typed by hand in 2001, extracted from websites thereafter. In 2012 I started a `FrenchConjugator.cs` with real rules; but never got it to work.
+All this time the conjugations were data. Typed by hand in 2001, extracted from websites thereafter. In 2012 I started a `FrenchConjugator.cs` with real rules; but never got it to work. It was an itch that needed scratching for 25 years.
 
-This autumn I tried again, in a new repository, [woutervanranst/verbodrome](https://github.com/woutervanranst/verbodrome). This is the whole prompt I gave Claude Fable 5.2 for the engine:
+So I gave Fable 5.1 this crappy prompt:
 
 ```
 in typescript, make a verb conjugation engine. it should start from the grammatical rules, 
@@ -298,7 +296,7 @@ Refer https://en.wikipedia.org/wiki/French_conjugation
 https://nl.wikipedia.org/wiki/Werkwoordsvervoegingen_in_het_Nederlands
 ```
 
-An hour later I had a rule-based engine for French and Dutch. The scraped corpus from VerbodromeX, the thing I had always used instead of an engine, became its test suite. It conjugates verbs that don't exist:
+An hour later I had [a rule-based engine for French and Dutch](https://github.com/woutervanranst/verbodrome/commit/06953b9a91cb72226b6760bb7f0fed7c31cec17b). The scraped corpus from VerbodromeX, the thing I had always used instead of an engine, became its test suite. It conjugates verbs that don't exist:
 
 ```sh
 npm run cli -- fr ploucer --mood indicative --tense present --person 1 --number plural
