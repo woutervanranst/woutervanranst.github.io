@@ -24,25 +24,19 @@ In 2000 my nickname was BlueBoy, and the programs I wrote with a few classmates 
 
 ![The Orange logo: an orange square with the name in white in the bottom-left corner.](/assets/posts/verbodrome/orange-logo.png)
 
-*The original: Orange.*
+*The original: [Orange](https://nl.wikipedia.org/wiki/Orange_%28bedrijf%29).*
 
 ![The Blue website in November 2000, made with the FrontPage Corporate Presence Web Wizard.](/assets/posts/verbodrome/blue-website-2000.png)
 
 *The Blue website, November 2000: "We are two students ( almost three ) who like programming. […] don't expect us to write super-fabulous-microsoft-overwhelming stuff, but we're trying."*
 
-The product list had an encryption program called *Deep Blue*, a periodic table quiz, a quiz on the capitals of Africa and *English Irregular Verbs* v1.4. That last one is the real ancestor of everything below: a list of verbs, a question, an answer, a log file.
-
-![The Blue logo from 2000 to 2007: Blue® with the slogan Programming The Future, Blue®, Blue, and the lowercase blue. wordmark.](/assets/posts/verbodrome/blue-logo-evolution.png)
-
-*The Blue logo, 2000 to 2007.*
+The product list had an encryption program called *Deep Blue*, named after [IBM's chess computer](https://en.wikipedia.org/wiki/Deep_Blue_%28chess_computer%29) that had beaten Kasparov in 1997 and that I found fascinating. Next to it were a periodic table quiz, a quiz on the capitals of Africa and *English Irregular Verbs* v1.4. That last one is the real ancestor of everything below: a list of verbs, a question, an answer, a log file.
 
 Today Blue Software is the name of my company as a freelancer, a wink to the teenager who drew that square. When I incorporated in 2021, the logo was the blue square with the name in the bottom-left corner again. In 2025 it got a refresh.
 
-![The 2021 Blue logo: a blue square with Blue in white in the bottom-left corner.](/assets/posts/verbodrome/blue-software-logo-2021.png)
+![The Blue logo from 2000 to 2025: Blue® with the slogan Programming The Future, Blue®, Blue, the lowercase blue. wordmark, the 2021 square and the 2025 rounded square.](/assets/posts/verbodrome/blue-logo-evolution.png)
 
-![The 2025 Blue logo: a rounded blue square with Blue in bold white letters in the middle.](/assets/posts/verbodrome/blue-software-logo-2025.png)
-
-*Blue Software, 2021 and 2025.*
+*The Blue logo, 2000 to 2025.*
 
 ## 2001: an Excel macro
 
@@ -92,13 +86,15 @@ The probability screen became a theme. In version 6.3 it turned into *dynamic* p
 
 ## January 2003: Bescherelle becomes Verbodrome
 
-In January 2003 Eric Van Hool, by then my former French teacher, was so taken with the program that he wanted it registered. That raised an awkward point: *Bescherelle* is a trademark of the publisher Hatier. The manual of version 6.3 already said so, and added that "every request for an immediate change of name will be granted at once". I needed a name of my own, and my friend Christian Wildiers came up with it: Verbodrome. On 24 January 2003 I sent him three icons with a V to choose from, and the program was renamed the same day. In April I deposited it with SABAM, "against all your good advice", as I wrote to another Eric, a family friend at the software company VANAS who had offered me a lawyer.
+In January 2003 Eric Van Hool, by then my former French teacher, was so taken with the program that he wanted it registered. That raised an awkward point: *Bescherelle* is a trademark of the publisher Hatier. The manual of version 6.3 already said so, and added that "every request for an immediate change of name will be granted at once". I needed a name of my own, and my friend Christian Wildiers came up with it: Verbodrome. On 24 January 2003 I sent him three icons with a V to choose from, and the program was renamed the same day. In April I deposited it with SABAM, "against all your good advice", as I wrote to the other Eric in this story, who had offered me a lawyer.
+
+That other Eric was a family friend and the CEO of VANAS, a small software company. Its lead software engineer, Danny Depecker, became my mentor. So while I was still in secondary school, I had a CEO for the commercial questions and a senior developer for the technical ones. The about box of Verbodrome 6 thanks "het VANAS team" for "hun antwoord op (al) mijn vragen en onoplosbare bugs" (their answers to (all) my questions and unsolvable bugs). Years later I would work at VANAS myself.
 
 ![The main window of Verbodrome V6: a question, an answer field, the exercise number, score and time.](/assets/posts/verbodrome/verbodrome-6-main-window.jpg)
 
 *Verbodrome 6, February 2003.*
 
-On 9 February I mailed my whole class: "GERAAK JE OOK HELEMAAL IN DE KNOOP VAN DIE FRANSE WERKWOORDEN? [...] \*trompetgeschal\* VERBODROME" (are you also completely tangled up in those French verbs? *fanfare*), with "( ja dit programma is volledig van mijn hand )", yes, I wrote this program entirely myself. It was a 15 MB download. Danny Depecker, my mentor at VANAS (the company I would later work for), got a CD and a printed manual as a New Year's present. He called it "a professional approach", but the CD was stuck in its sleeve with glue and could not be used.
+On 9 February I mailed my whole class: "GERAAK JE OOK HELEMAAL IN DE KNOOP VAN DIE FRANSE WERKWOORDEN? [...] \*trompetgeschal\* VERBODROME" (are you also completely tangled up in those French verbs? *fanfare*), with "( ja dit programma is volledig van mijn hand )", yes, I wrote this program entirely myself. It was a 15 MB download. Danny got a CD and a printed manual as a New Year's present. He called it "a professional approach", but the CD was stuck in its sleeve with glue and could not be used.
 
 ![The Verbodrome 6 package: a binder with the Blue logo and a CD with the round V logo.](/assets/posts/verbodrome/verbodrome-6-package.jpg)
 
@@ -130,7 +126,7 @@ In October 2003 two magazines wrote about it. *Netwerk*, the magazine I read in 
 
 *Clickx 51, October 2003. The last line reads: "Er zijn geen kinderen meer..." (Kids these days...)*
 
-The articles brought a few buyers, all parents. The first person to actually pay was An, a French teacher at another school who had been testing it. Sophie Ann, the head of French at a school in Ghent, asked for a price for her computer lab after reading *Netwerk*. I forwarded her mail to Steven with one line: "JACKPOT ;)". I don't know if she bought it.
+The articles brought a few buyers, all parents. The first person to actually pay was An, a French teacher at Xaveriuscollege who had been testing it. Sophie Ann, the head of French at a school in Ghent, asked for a price for her computer lab after reading *Netwerk*. I forwarded her mail to Steven with one line: "JACKPOT ;)". I don't know if she bought it.
 
 Then I wrote to the others: Die Keure, Standaard Uitgeverij, Wolters Plantyn, the e-learning company eXplio and, later, Visiria in the Netherlands. In January 2004 I mailed: "Onverhoopt heb ik afspraken met 4 uitgeverijen [...] Misschien laat ik mij wel afschepen met 500€ (voor tweeëneenhalf jaar werk)" (Against all odds I have meetings with 4 publishers. Maybe I'll let them fob me off with €500, for two and a half years of work). I was in my final year of secondary school and could only go on Wednesday afternoons. That winter I presented at De Boeck, Pelckmans, Die Keure and Wolters Plantyn.
 
@@ -245,7 +241,7 @@ Version 10 got a new name: Angry Verbs. Those were the days of Angry Birds and F
 
 ![The Flappy Bird logo.](/assets/posts/verbodrome/flappy-bird-logo.png)
 
-*Flappy Bird, the game everybody was playing that winter.*
+*[Flappy Bird](https://en.wikipedia.org/wiki/Flappy_Bird), the game everybody was playing that winter.*
 
 There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, and a Teacher mode. Later it also became a website on Azure, which is how I learned AngularJS. Every language got a background photo: the Eiffel Tower, Big Ben, Amsterdam canals, the Roman Forum, Berlin.
 
