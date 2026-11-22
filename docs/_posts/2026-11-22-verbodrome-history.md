@@ -8,6 +8,10 @@ subtitle: 'From an Excel macro in 2001 to a rule-based conjugation engine in 202
 
 In September 2001, in the fourth year of secondary school, I had to learn the *Bescherelle* by heart. The Bescherelle is the little French book with a conjugation table for every model verb, and our French teachers wanted us to know the irregular ones cold. I found it more fun to write a program that would quiz me than to learn the verbs.
 
+![The green Bescherelle, La Conjugaison pour tous, published by Hatier.](/assets/posts/verbodrome/bescherelle-book.jpg)
+
+*The book we had to learn by heart. I scanned it in 2002 for the manual of version 6.*
+
 That program kept me busy, on and off, for 25 years. It started as an Excel macro, became a Visual Basic 6 application, a .NET client/server system for the classroom, a ClickOnce desktop app, a Windows 8 Store app, a game called Angry Verbs, a couple of web apps and, this year, a conjugation engine. Every rewrite was an excuse to try a technology I wanted to learn, so in hindsight it is a decent portfolio of how I learned to program.
 
 I dug up the old backup DVDs, my mail archive from 1997 to 2007 and a handful of later repositories, and put every version I could find in one repository: [woutervanranst/verbodrome6](https://github.com/woutervanranst/verbodrome6).
@@ -17,6 +21,10 @@ I dug up the old backup DVDs, my mail archive from 1997 to 2007 and a handful of
 I started programming in DOS batch files when I was seven. By 1999 I was writing Visual Basic under the alias *Vengakid* (the Vengaboys were big) and reading the computer magazine *Netwerk*, which I called *mijn lijfblad*, my bible. Four years later that magazine would write about me.
 
 In 2000 my nickname was BlueBoy, and the programs I wrote with a few classmates needed a publisher. So we invented one: *Blue®*. The logo was a blue square with the name in white in the bottom-left corner. That was a straight copy of Orange, the third mobile operator in Belgium at the time after Proximus and Mobistar (KPN Orange, renamed BASE in 2002), with the colour changed. I thought that was very clever.
+
+![The Orange logo: an orange square with the name in white in the bottom-left corner.](/assets/posts/verbodrome/orange-logo.png)
+
+*The original: Orange.*
 
 ![The Blue website in November 2000, made with the FrontPage Corporate Presence Web Wizard.](/assets/posts/verbodrome/blue-website-2000.png)
 
@@ -28,7 +36,13 @@ The product list had an encryption program called *Deep Blue*, a periodic table 
 
 *The Blue logo, 2000 to 2007.*
 
-Today Blue Software is the name of my company as a freelancer, a wink to the teenager who drew that square.
+Today Blue Software is the name of my company as a freelancer, a wink to the teenager who drew that square. When I incorporated in 2021, the logo was the blue square with the name in the bottom-left corner again. In 2025 it got a refresh.
+
+![The 2021 Blue logo: a blue square with Blue in white in the bottom-left corner.](/assets/posts/verbodrome/blue-software-logo-2021.png)
+
+![The 2025 Blue logo: a rounded blue square with Blue in bold white letters in the middle.](/assets/posts/verbodrome/blue-software-logo-2025.png)
+
+*Blue Software, 2021 and 2025.*
 
 ## 2001: an Excel macro
 
@@ -68,23 +82,23 @@ In March 2002 version 5 was the first one in Visual Basic 6. It still asked its 
 
 *Bescherelle v5, March 2002: a real installer.*
 
-Version 6 (summer 2002 to January 2003) finally had a main window. It stored its 200 verbs in an Access database and had an interface in Dutch, French and English. I also wrote a custom OCX with Winsock client and server controls so the program could register itself online against a server on my home PC, behind a dynamic DNS name. On 23 August 2002 two of my teachers got a beta CD with a letter. A few months later the to-do list says *internetbrol wegwerken* (get rid of the internet junk), and version 6.3 shipped without online registration.
+Version 6 (summer 2002 to January 2003) finally had a main window. It stored its 200 verbs in an Access database and had an interface in Dutch, French and English. I also wrote a custom OCX with Winsock client and server controls so the program could register itself online against a server on my home PC, behind a dynamic DNS name. On 23 August 2002 two of my teachers, my French teacher Eric Van Hool among them, got a beta CD with a letter. A few months later the to-do list says *internetbrol wegwerken* (get rid of the internet junk), and version 6.3 shipped without online registration.
 
 ![Bescherelle V6 - Probabiliteitsmanagement: per tense, how many of 100 questions should be about it.](/assets/posts/verbodrome/bescherelle-6-probability.png)
 
 *Bescherelle v6.2, "probability management": you set how often each tense is asked.*
 
-The probability screen became a theme. In version 6.3 it turned into *dynamic* probability: the tenses you get wrong are asked more often. In December 2003 my maths teacher designed a better algorithm for it, and in some form that idea (every tense starts at the same weight, which halves on a right answer and doubles on a wrong one) is in every version after it.
+The probability screen became a theme. In version 6.3 it turned into *dynamic* probability: the tenses you get wrong are asked more often. In December 2003 my maths teacher, Pascale, designed a better algorithm for it, and in some form that idea (every tense starts at the same weight, which halves on a right answer and doubles on a wrong one) is in every version after it.
 
 ## January 2003: Bescherelle becomes Verbodrome
 
-In January 2003 my former French teacher was so taken with the program that he wanted it registered. That raised an awkward point: *Bescherelle* is a trademark of the publisher Hatier. The manual of version 6.3 already said so, and added that "every request for an immediate change of name will be granted at once". As far as I know nobody asked, but on 24 January 2003 I renamed it anyway: Verbodrome. In April I deposited it with SABAM, "against all your good advice", as I wrote to a family friend who had offered me a lawyer.
+In January 2003 Eric Van Hool, by then my former French teacher, was so taken with the program that he wanted it registered. That raised an awkward point: *Bescherelle* is a trademark of the publisher Hatier. The manual of version 6.3 already said so, and added that "every request for an immediate change of name will be granted at once". I needed a name of my own, and my friend Christian Wildiers came up with it: Verbodrome. On 24 January 2003 I sent him three icons with a V to choose from, and the program was renamed the same day. In April I deposited it with SABAM, "against all your good advice", as I wrote to another Eric, a family friend at the software company VANAS who had offered me a lawyer.
 
 ![The main window of Verbodrome V6: a question, an answer field, the exercise number, score and time.](/assets/posts/verbodrome/verbodrome-6-main-window.jpg)
 
 *Verbodrome 6, February 2003.*
 
-On 9 February I mailed my whole class: "GERAAK JE OOK HELEMAAL IN DE KNOOP VAN DIE FRANSE WERKWOORDEN? [...] \*trompetgeschal\* VERBODROME" (are you also completely tangled up in those French verbs? *fanfare*), with "( ja dit programma is volledig van mijn hand )", yes, I wrote this program entirely myself. It was a 15 MB download. My mentor, who worked at a software company, got a CD and a printed manual as a New Year's present. He called it "a professional approach", but the CD was stuck in its sleeve with glue and could not be used.
+On 9 February I mailed my whole class: "GERAAK JE OOK HELEMAAL IN DE KNOOP VAN DIE FRANSE WERKWOORDEN? [...] \*trompetgeschal\* VERBODROME" (are you also completely tangled up in those French verbs? *fanfare*), with "( ja dit programma is volledig van mijn hand )", yes, I wrote this program entirely myself. It was a 15 MB download. Danny Depecker, my mentor at VANAS (the company I would later work for), got a CD and a printed manual as a New Year's present. He called it "a professional approach", but the CD was stuck in its sleeve with glue and could not be used.
 
 ![The Verbodrome 6 package: a binder with the Blue logo and a CD with the round V logo.](/assets/posts/verbodrome/verbodrome-6-package.jpg)
 
@@ -100,9 +114,11 @@ During 2003 the VB6 code grew from about 4,400 to almost 9,000 lines. Teachers c
 
 ## Selling it: publishers and magazines
 
-A standard licence cost €9.99, a deluxe edition with the binder €24.99. I asked in an email whether that income was "100% black money". It was not legal, the family friend answered, and he suggested invoicing it through his company "for a small percentage". It never came to that, because there was very little to invoice.
+A standard licence cost €9.99, a deluxe edition with the binder €24.99. I asked in an email whether that income was "100% black money". It was not legal, Eric answered, and he suggested invoicing it through VANAS "for a small percentage". It never came to that, because there was very little to invoice.
 
-The real plan was a publisher. At the end of April 2003 I sent a letter and a trial version to the Belgian educational publishers. Van In first answered "we would like to look at the software" and in September said no: "Ik geef toe dat de werkwoorden een pijnpunt blijven" (I admit verbs remain a sore point), but a verb drill on its own did not fit their courses. De Boeck gave me a 45-minute slot on 8 October 2003 and cancelled it the day before. I did not take that well.
+The real plan was a publisher, and Eric Van Hool was the driving force behind it. He used Verbodrome in his classes, with verb lists per month that I shipped as database updates. He proofread my letter to the publishers, got me in at De Boeck through someone he knew there, and let me use his name as a reference, which opened more doors than mine did. The quote on the CD insert is his: "Saaie Franse werkwoorden vervoegen werd plots een uitdaging, een spel [...] Het spel werd een competitie waarin iedereen de winnaar wilde zijn en ook werd." (Boring French conjugations suddenly became a challenge, a game. The game became a competition that everyone wanted to win, and did.)
+
+At the end of April 2003 I sent the letter and a trial version to the Belgian educational publishers. Van In first answered "we would like to look at the software" and in September said no: "Ik geef toe dat de werkwoorden een pijnpunt blijven" (I admit verbs remain a sore point), but a verb drill on its own did not fit their courses. De Boeck gave me a 45-minute slot on 8 October 2003 and cancelled it the day before. I did not take that well.
 
 In October 2003 two magazines wrote about it. *Netwerk*, the magazine I read in 1999, printed a short piece without telling me. *Clickx* put the website in its top 5 under the title "Blauwe Wouter".
 
@@ -114,7 +130,7 @@ In October 2003 two magazines wrote about it. *Netwerk*, the magazine I read in 
 
 *Clickx 51, October 2003. The last line reads: "Er zijn geen kinderen meer..." (Kids these days...)*
 
-The articles brought a few buyers, all parents. The first person to actually pay was a French teacher at another school who had been testing it. A head of French in Ghent asked for a price for her computer lab after reading *Netwerk*, which I forwarded to a friend with the subject line "JACKPOT ;)". I don't know if she bought it.
+The articles brought a few buyers, all parents. The first person to actually pay was An, a French teacher at another school who had been testing it. Sophie Ann, the head of French at a school in Ghent, asked for a price for her computer lab after reading *Netwerk*. I forwarded her mail to Steven with one line: "JACKPOT ;)". I don't know if she bought it.
 
 Then I wrote to the others: Die Keure, Standaard Uitgeverij, Wolters Plantyn, the e-learning company eXplio and, later, Visiria in the Netherlands. In January 2004 I mailed: "Onverhoopt heb ik afspraken met 4 uitgeverijen [...] Misschien laat ik mij wel afschepen met 500€ (voor tweeëneenhalf jaar werk)" (Against all odds I have meetings with 4 publishers. Maybe I'll let them fob me off with €500, for two and a half years of work). I was in my final year of secondary school and could only go on Wednesday afternoons. That winter I presented at De Boeck, Pelckmans, Die Keure and Wolters Plantyn.
 
@@ -126,7 +142,7 @@ All of them said no:
 - De Boeck thought it was "cool", and would get back to me "within the year".
 - Pelckmans would "look into it further". I'm still waiting.
 
-Looking back, Van In and Visiria were right. A drill for verbs alone is a feature, not a product, and the people who decide what schools buy are not the pupils who use it. One of the parents put it better than I could: "De uitgevers zijn natuurlijk niet de gebruikers." (The publishers are, of course, not the users.)
+Looking back, Van In and Visiria were right. A drill for verbs alone is a feature, not a product, and the people who decide what schools buy are not the pupils who use it. Pierre, one of the parents who bought it, put it better than I could: "De uitgevers zijn natuurlijk niet de gebruikers." (The publishers are, of course, not the users.)
 
 ## Blue Software Corporation
 
@@ -148,15 +164,26 @@ In June 2004 I tried to license an engine for a multilingual version. I offered 
 
 ## 2004: the classroom server
 
-The idea for a network version came from that teacher at the other school: a teacher should be able to follow the whole class from one screen. In October 2003 I wrote my first C# code, a console server on port 6000 with one thread per client and a line-based text protocol, and gave Verbodrome 6.6 a network client to talk to it. The first handshake log is in an email from 25 October 2003.
+The idea for a network version came from An: a teacher should be able to follow the whole class from one screen. In October 2003 I wrote my first C# code, a console server on port 6000 with one thread per client and a line-based text protocol, and gave Verbodrome 6.6 a network client to talk to it. On 20 October I mailed An the first handshake, "het ontspruiten van uw gedachtegoed" (your idea, sprouting):
 
-In the summer of 2004, after my final exams, I rewrote everything in C# on .NET 1.1: Verbodrome 7 for the pupils, Verboserve 7 for the teacher, and a shared library, *Verbosystem*, code name *Bellerophone*. It used .NET Remoting over TCP. The pupil's session lived on the server as a `MarshalByRefObject`, and the client was "only a thin shell" that showed what the server sent. The draft website said: "Twee jaar expertise. Een half jaar ontwerptafel. Een maand ontwikkeling. Verbodrome 7 is een feit." (Two years of expertise. Half a year at the drawing board. One month of development.)
+```
+CS: AUTH_REQUEST Verbodrome Build 6500.20031007
+CS: AUTH_USER Wouter
+CS: AUTH_PASS hallo
+CS: AUTH_PCID 481606069
+CS: AUTH_KEY 2EF13A0B
+SC[0]: AUTH_AUTHENCITATED USERNBR 1 BUILD BETA
+```
+
+"De eerste communicatie tussen Verbodrome-server en Verbodrome-client: de aanmeldprocedure!!!!!" (The first communication between Verbodrome server and client: the login procedure!) The spelling of `AUTHENCITATED` is original.
+
+Danny had told me: "VB6 is over, .NET Framework and C# are the new kids on the block." So naturally I wanted to try that, and in the summer of 2004, after my final exams, I rewrote everything in C# on .NET 1.1: Verbodrome 7 for the pupils, Verboserve 7 for the teacher, and a shared library, *Verbosystem*, code name *Bellerophone*, a reference to *Mission: Impossible 2*. It used .NET Remoting over TCP. The pupil's session lived on the server as a `MarshalByRefObject`, and the client was "only a thin shell" that showed what the server sent. The draft website said: "Twee jaar expertise. Een half jaar ontwerptafel. Een maand ontwikkeling. Verbodrome 7 is een feit." (Two years of expertise. Half a year at the drawing board. One month of development.)
 
 ![Verboserve 7: per pupil the list of questions with right and wrong answers, coloured from red to green, and a table per tense.](/assets/posts/verbodrome/verboserve-7-session-report.png)
 
 *Verboserve 7, September 2004: the teacher's live view of a session, here with a stress-test user.*
 
-The teacher started a session with a wizard: individual or shared questions, which verbs and tenses, a time limit, and a competition mode where every pupil saw their rank ("Je staat laatst...", you're last, followed by how many points the next one was ahead). The background of the client changed colour with your score, from green to red. I wrote in 2006 that the colour does hurt when you score below 20%, "but that's a bit the point".
+The teacher started a session with a wizard: individual or shared questions, which verbs and tenses, a time limit, and a competition mode where every pupil saw their rank ("Je staat laatst...", you're last, followed by how many points the next one was ahead). The background of the client changed colour with your score, from green to red. I wrote to Pierre in 2006 that the colour does hurt when you score below 20%, "but that's a bit the point".
 
 ![Verbodrome 7 at 80%: a yellow-green window.](/assets/posts/verbodrome/verbodrome-7-score-80.png)
 
@@ -170,19 +197,19 @@ The teacher started a session with a wizard: individual or shared questions, whi
 
 On 13 September 2004 I installed it at my old school, on Windows 98 machines with .NET 1.1: "VERBODROME WERKT!!! (op de krotcomputers van t OLVC :-))" (it works, on the school's crappy computers). A week later, during the session where I explained it to the French teachers, it crashed: "4 weken (à 15 uur per dag) werk in minder dan een seconde in rook te zien opgaan doet pijn." (Watching four weeks of work, at 15 hours a day, go up in smoke in less than a second hurts.) University started the same week.
 
-In April 2005 I opened the code again: "Tot mijn groot spijt/verdriet/woede/onmacht/frustratie versta ik niets meer van mijn code." (To my great regret/sorrow/anger/helplessness/frustration I no longer understand any of my code.) My mentor answered: "Programmeren <=> Studeren ... het 2de moet nu." (Programming versus studying, the second one has to happen now.) A file called `Final Notes.txt`, dated 13 August 2005, ends it: "onopgeloste bug, te grootschalig, te weinig tijd" (unsolved bug, too large, too little time). The code is under [`v7-final/04-verbodrome7`](https://github.com/woutervanranst/verbodrome6/tree/v7-final/04-verbodrome7).
+In April 2005 I opened the code again: "Tot mijn groot spijt/verdriet/woede/onmacht/frustratie versta ik niets meer van mijn code." (To my great regret/sorrow/anger/helplessness/frustration I no longer understand any of my code.) Danny answered: "Programmeren <=> Studeren ... het 2de moet nu." (Programming versus studying, the second one has to happen now.) A file called `Final Notes.txt`, dated 13 August 2005, ends it: "onopgeloste bug, te grootschalig, te weinig tijd" (unsolved bug, too large, too little time). The code is under [`v7-final/04-verbodrome7`](https://github.com/woutervanranst/verbodrome6/tree/v7-final/04-verbodrome7).
 
-In December 2004, homesick for it in my first months at university, I had written to a friend that seeing my own creation run on a computer was "God spelen", playing God.
+In December 2004, in my first months at university, I had written to Nicole that writing Verbodrome 6 and 7 was in my top 5 of best moments, and that seeing my own creation run on a computer was "God spelen", playing God.
 
 ## 2006: Verbodrome 8
 
-In September 2006, at the start of my third year at KU Leuven, a parent who had bought a licence in 2004 asked for a new key. He thought I had stopped. I sent him the key generator, and two months later, "in een ambitieuze bui" (in an ambitious mood), I had a new version: Verbodrome 8, a standalone C# WinForms app on .NET 2.0 with SQL Server 2005 Express, installed with ClickOnce. Licences were XML files signed with an RSA key: you mailed your licence request, I signed it and mailed it back. "Maar het werkt en dat is zalig." (But it works and that is bliss.) "Programmeren tot 5 uur smorgends is zalig." (Programming until 5 in the morning is bliss.)
+In September 2006, at the start of my third year at KU Leuven, Pierre, a parent who had bought a licence in 2004, asked for a new key. He thought I had stopped. I sent him the key generator, and two months later, "in een ambitieuze bui" (in an ambitious mood), I had a new version: Verbodrome 8, a standalone C# WinForms app on .NET 2.0 with SQL Server 2005 Express, installed with ClickOnce. Licences were XML files signed with an RSA key: you mailed your licence request, I signed it and mailed it back. "Maar het werkt en dat is zalig." (But it works and that is bliss.) "Programmeren tot 5 uur smorgends is zalig." (Programming until 5 in the morning is bliss.)
 
 ![An unhandled SqlException in Verbodrome 8: Incorrect syntax near 'appeler'.](/assets/posts/verbodrome/verbodrome-8-sql-apostrophe-bug.jpg)
 
 *Verbodrome 8, 30 November 2006. The verb was* s'appeler*, and the apostrophe ended up in a SQL string. A textbook SQL injection, by a French verb.*
 
-I added German and, in December 2007, Spanish, and moved to Visual Studio 2008 inside a Windows VM on a Mac. The testers, a parent and his daughter, were honest: "eigenlijk komt het er op neer dat de vorige versie beter was" (it comes down to the previous version being better). The installation was too heavy, the colours too loud. And about the planned price of €5 a year: "zwier die 5 euro van de website" (throw that €5 off the website). The last build is from March 2008. There never was a final release.
+I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastián and needed to train Spanish verbs myself. Along the way I moved to Visual Studio 2008, inside a Windows VM on a Mac. The testers, Pierre and his daughter, were honest: "eigenlijk komt het er op neer dat de vorige versie beter was" (it comes down to the previous version being better). The installation was too heavy, the colours too loud. And about the planned price of €5 a year: "zwier die 5 euro van de website" (throw that €5 off the website). The last build is from March 2008. There never was a final release.
 
 ![The Verbodrome 8 score report on a green background: 16 out of 21.](/assets/posts/verbodrome/verbodrome-8-score-report.png)
 
@@ -214,7 +241,13 @@ The app cost €2.60 or $3.49 with a free trial. The first sale came on 22 Octob
 
 ## 2013-2015: Angry Verbs, and a photo of Berlin
 
-Version 10 got a new name: Angry Verbs. Those were the days of Angry Birds and Flappy Bird, when every app seemed to need a bird or a face, so the logo became a `>_<` face. The file is dated 11 February 2014, the week Flappy Bird was pulled from the app stores. There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, and a Teacher mode. Later it also became a website on Azure, which is how I learned AngularJS. Every language got a background photo: the Eiffel Tower, Big Ben, Amsterdam canals, the Roman Forum, Berlin.
+Version 10 got a new name: Angry Verbs. Those were the days of Angry Birds and Flappy Bird, when every app seemed to need a bird or a face, so the logo became a `>_<` face. The file is dated 11 February 2014, two days after Flappy Bird was pulled from the App Store.
+
+![The Flappy Bird logo.](/assets/posts/verbodrome/flappy-bird-logo.png)
+
+*Flappy Bird, the game everybody was playing that winter.*
+
+There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, and a Teacher mode. Later it also became a website on Azure, which is how I learned AngularJS. Every language got a background photo: the Eiffel Tower, Big Ben, Amsterdam canals, the Roman Forum, Berlin.
 
 ![The Angry Verbs logo: a white >_< on blue.](/assets/posts/verbodrome/angry-verbs-logo.png)
 
@@ -279,11 +312,15 @@ npm run cli -- nl zorpen --mood indicative --tense past --person 1 --number sing
 # ik zorpte
 ```
 
-The trainer on top of it is a static site. You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as my maths teacher's algorithm from 2003.
+The trainer on top of it is a static site. You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
 
-![Screenshot placeholder for Verbodrome 2026.](/assets/posts/verbodrome/verbodrome-2026-placeholder.png)
+![Verbodrome 2026: the Dutch prompt "ik heb" over Paris, with ten French answer cards.](/assets/posts/verbodrome/verbodrome-2026-question.jpg)
 
-*Verbodrome, 2026.*
+*Verbodrome, 2026. The Paris in the background is AI-generated. I had learned my lesson about city photos.*
+
+![Feedback after picking "tu vas aimer" for "jij houdt van": wrong tense, futur proche instead of présent, with the rule for regular -er verbs.](/assets/posts/verbodrome/verbodrome-2026-feedback.jpg)
+
+*The feature everybody asked for: "tu vas aimer" means "jij gaat houden van", futur proche, so* verkeerde tijd *(wrong tense), followed by the rule for regular -er verbs.*
 
 ## Looking back
 
