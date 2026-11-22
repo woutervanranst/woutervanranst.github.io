@@ -42,7 +42,7 @@ My [report](https://github.com/woutervanranst/prolog/blob/main/Stageverslag/Stag
 
 The second was linear programming. The rules can be written as linear constraints, and the objective could be the total priority of the placed articles. The downside is that an LP solver is a black box: you cannot steer how it searches. Truth be told - I also didn't understand LPs that much.
 
-The third was Prolog. Prolog has [backtracking](https://en.wikipedia.org/wiki/Backtracking) built in (when a choice leads to a dead end, Prolog undoes it, goes back to the most recent choice and tries the next option), so once you have one layout, asking for the next one costs almost nothing.
+The third was Prolog. Prolog has [backtracking](https://en.wikipedia.org/wiki/Backtracking) built in (when you model a problem like a search tree with options to choose from, when a choice leads to a dead end, Prolog undoes it, goes back to the most recent choice and tries the next option), so once you have one layout, asking for the next one costs almost nothing.
 
 The fourth was Java. The 2008 version of me rejected it for having "too much overhead" and no backtracking. I no longer agree with that. As the rest of this post shows, the speedup came from the representation and the search strategy, and those would have worked in Java too.
 
