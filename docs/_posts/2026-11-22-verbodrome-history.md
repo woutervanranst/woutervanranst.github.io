@@ -138,7 +138,7 @@ All of them said no:
 - De Boeck thought it was "cool", and would get back to me "within the year".
 - Pelckmans would "look into it further". I'm still waiting.
 
-Looking back, Van In and Visiria were right. A drill for verbs alone is a feature, not a product, and the people who decide what schools buy are not the pupils who use it. Pierre, one of the parents who bought it, put it better than I could: "De uitgevers zijn natuurlijk niet de gebruikers." (The publishers are, of course, not the users.)
+Looking back, Van In and Visiria were right. A drill for verbs alone is a feature, not a product, and the people who decide what schools buy are not the pupils who use it. One of the parents who bought it, put it better than I could: "De uitgevers zijn natuurlijk niet de gebruikers." (The publishers are, of course, not the users.)
 
 ## Blue Software Corporation
 
@@ -179,7 +179,7 @@ Danny had told me: "VB6 is over, .NET Framework and C# are the new kids on the b
 
 *Verboserve 7, September 2004: the teacher's live view of a session, here with a stress-test user.*
 
-The teacher started a session with a wizard: individual or shared questions, which verbs and tenses, a time limit, and a competition mode where every pupil saw their rank ("Je staat laatst...", you're last, followed by how many points the next one was ahead). The background of the client changed colour with your score, from green to red. I wrote to Pierre in 2006 that the colour does hurt when you score below 20%, "but that's a bit the point".
+The teacher started a session with a wizard: individual or shared questions, which verbs and tenses, a time limit, and a competition mode where every pupil saw their rank ("Je staat laatst...", you're last, followed by how many points the next one was ahead). The background of the client changed colour with your score, from green to red. I wrote to a parent in 2006 that the colour does hurt when you score below 20%, "but that's a bit the point".
 
 ![Verbodrome 7 at 80%: a yellow-green window.](/assets/posts/verbodrome/verbodrome-7-score-80.png)
 
@@ -195,17 +195,15 @@ On 13 September 2004 I installed it at my old school, on Windows 98 machines wit
 
 In April 2005 I opened the code again: "Tot mijn groot spijt/verdriet/woede/onmacht/frustratie versta ik niets meer van mijn code." (To my great regret/sorrow/anger/helplessness/frustration I no longer understand any of my code.) Danny answered: "Programmeren <=> Studeren ... het 2de moet nu." (Programming versus studying, the second one has to happen now.) A file called `Final Notes.txt`, dated 13 August 2005, ends it: "onopgeloste bug, te grootschalig, te weinig tijd" (unsolved bug, too large, too little time). The code is under [`v7-final/04-verbodrome7`](https://github.com/woutervanranst/verbodrome6/tree/v7-final/04-verbodrome7).
 
-In December 2004, in my first months at university, I had written to Nicole that writing Verbodrome 6 and 7 was in my top 5 of best moments, and that seeing my own creation run on a computer was "God spelen", playing God.
-
 ## 2006: Verbodrome 8
 
-In September 2006, at the start of my third year at KU Leuven, Pierre, a parent who had bought a licence in 2004, asked for a new key. He thought I had stopped. I sent him the key generator, and two months later, "in een ambitieuze bui" (in an ambitious mood), I had a new version: Verbodrome 8, a standalone C# WinForms app on .NET 2.0 with SQL Server 2005 Express, installed with ClickOnce. Licences were XML files signed with an RSA key: you mailed your licence request, I signed it and mailed it back. "Maar het werkt en dat is zalig." (But it works and that is bliss.) "Programmeren tot 5 uur smorgends is zalig." (Programming until 5 in the morning is bliss.)
+In September 2006, at the start of my third year at KU Leuven, a parent who had bought a licence in 2004, asked for a new key. He thought I had stopped. I sent him the key generator, and two months later, "in een ambitieuze bui" (in an ambitious mood), I had a new version: Verbodrome 8, a standalone C# WinForms app on .NET 2.0 with SQL Server 2005 Express, installed with ClickOnce. Licences were XML files signed with an RSA (another obsession of mine) key: you mailed your licence request, I signed it and mailed it back. "Programmeren tot 5 uur smorgends is zalig." (Programming until 5 in the morning is bliss.)
 
 ![An unhandled SqlException in Verbodrome 8: Incorrect syntax near 'appeler'.](/assets/posts/verbodrome/verbodrome-8-sql-apostrophe-bug.jpg)
 
 *Verbodrome 8, 30 November 2006. The verb was* s'appeler*, and the apostrophe ended up in a SQL string. A textbook SQL injection, by a French verb.*
 
-I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastián and needed to train Spanish verbs myself. Along the way I moved to Visual Studio 2008, inside a Windows VM on a Mac. The testers, Pierre and his daughter, were honest: "eigenlijk komt het er op neer dat de vorige versie beter was" (it comes down to the previous version being better). The installation was too heavy, the colours too loud. And about the planned price of €5 a year: "zwier die 5 euro van de website" (throw that €5 off the website). The last build is from March 2008. There never was a final release.
+I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastián and needed to train Spanish verbs myself. Along the way I moved to Visual Studio 2008, inside a Windows VM on a Mac (I bought one because of the Vista debacle). A tester was honest: "eigenlijk komt het er op neer dat de vorige versie beter was" (it comes down to the previous version being better). The installation was too heavy, the colours too loud. And about the planned price of €5 a year: "zwier die 5 euro van de website" (throw that €5 off the website). The last build is from March 2008. There never was a final release.
 
 ![The Verbodrome 8 score report on a green background: 16 out of 21.](/assets/posts/verbodrome/verbodrome-8-score-report.png)
 
@@ -213,7 +211,7 @@ I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastiá
 
 ## 2012: Windows 8
 
-From 2011 to 2014 I worked at Microsoft in solution sales, for Windows 8 among others, so in the summer of 2012 Verbodrome became a Windows 8 Store app: Verbodrome 9, C# and XAML on WinRT, with a home-made MVVM layer and the score colour still in the background.
+From 2011 to 2014 I worked at Microsoft as a solution sales for Windows 8, so in the summer of 2012 Verbodrome became a Windows 8 Store app: Verbodrome 9, C# and XAML on WinRT, with a home-made MVVM layer and the score colour still in the background.
 
 ![Verbodrome 9: a green full-screen question, Geef de conditionnel présent van asseoir in de 1e pers. enk.](/assets/posts/verbodrome/verbodrome-9-question.png)
 
@@ -253,15 +251,15 @@ There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, a
 
 *Angry Verbs: the logo (2014), the game modes and the campaign.*
 
-The photo for German was a Berlin skyline at dusk. I found it by googling "Berlin", where it was the fourth result, and it appeared on hundreds of other sites without any copyright notice. In 2015 a letter came from a Berlin lawyer at Photoclaim, on behalf of the photographer. By July 2015 the claim was €1,253, with a calculation of what a court case at the District Court of Berlin would cost on top.
+The photo for German was a Berlin skyline at dusk. I found it by googling "Berlin", where it was the fourth result, and it appeared on hundreds of other sites without any copyright notice. In 2015 a letter came from a Berlin lawyer (dare I say ][extortionist](https://hoesmann.legal/bickel-copyright-infringement-warning/)) at Photoclaim, on behalf of the photographer. By July 2015 the claim was €1,253, with a calculation of what a court case at the District Court of Berlin would cost on top.
 
-I took the site down and negotiated. Angry Verbs was a free, non-commercial student project. "Until this day, I have exactly made EUR 0 of revenues with the site." In May, a representative month, it had 120 page views, "of which a large part are probably from indexing sites, you, me and your client". The photo could not be bought on Flickr, and €350 for one licence was far above what stock sites charged. They came down to €350 plus €551 in legal costs, and in August 2015 we settled on €200.
+I took the site down and negotiated and settled for €200.
 
 Looking back, it is a bit ridiculous: €200 for a photo, and the end of a project I had carried since secondary school. I didn't put Angry Verbs back online.
 
 ## 2020: VerbodromeX
 
-During the 2020 lockdowns pupils were practising at home, and I picked it up once more. VerbodromeX ran on `verbodrome.eu`: ASP.NET Core 3.1 Razor Pages, Entity Framework Core (the `DbContext` was still called `AngryVerbsContext`), Azure App Service with a pre-production slot to swap, Azure AD B2C with school and class as sign-up attributes, Application Insights, and a Let's Encrypt certificate I renewed by hand. The parsers now scraped seven languages.
+During the 2020 lockdowns pupils were practising at home, and I picked it up once more. VerbodromeX ran on `verbodrome.eu`: ASP.NET Core 3.1 Razor Pages, Entity Framework Core (the `DbContext` was still called `AngryVerbsContext`), Azure App Service with a pre-production slot to swap, Azure AD B2C with school and class as sign-up attributes, Application Insights, and a Let's Encrypt certificate I had to renew by hand. The parsers now scraped seven languages.
 
 Two things were new. Questions became multiple choice, asked from a Dutch prompt. And the score page analysed your mistakes: *Deze tijden verwar je regelmatig*, these tenses you mix up regularly. That was an idea from a mind map I drew in February 2003 and never built.
 
@@ -275,12 +273,14 @@ I mailed it to a few language teachers ("Met Verbodrome geen getreur"). The last
 
 ## 2026: an engine, finally
 
-All this time the conjugations were data. Typed by hand in 2001, extracted from Le Conjugateur in 2002, scraped from websites in 2012 and 2020. In 2012 I started a `FrenchConjugator.cs` with real rules; the file in the repository is entirely commented out. The engine I asked Brewalan for in 2003 never came.
+All this time the conjugations were data. Typed by hand in 2001, extracted from websites thereafter. In 2012 I started a `FrenchConjugator.cs` with real rules; but never got it to work.
 
 This autumn I tried again, in a new repository, [woutervanranst/verbodrome](https://github.com/woutervanranst/verbodrome). This is the whole prompt I gave Claude Fable 5.2 for the engine:
 
 ```
-in typescript, make a verb conjugation engine. it should start from the grammatical rules, it can hardcode the exceptions but it should not just ’store all conjugations’ - it should also work with invented verbs and correctly apply the rules
+in typescript, make a verb conjugation engine. it should start from the grammatical rules, 
+it can hardcode the exceptions but it should not just ’store all conjugations’ - 
+it should also work with invented verbs and correctly apply the rules
 
 It should support multiple languages, lets start with French (‘fr’) and Dutch (‘nl)
 
@@ -308,19 +308,21 @@ npm run cli -- nl zorpen --mood indicative --tense past --person 1 --number sing
 # ik zorpte
 ```
 
-Then I designed the trainer as a mockup in Claude Design and gave Claude Fable 5.2 a second prompt:
+I then prompted for a Verbodrome reincarnation as a mockup in Claude Design and let Fable implement it:
 
 ```
 Consider this Claude Design project. Implement it.
 
 the goal is that the conjugation engine (which now makes up the repository) is a
-  standalone module that is referenced / used by other apps. you may modify it to enable the
-  aforementioned application if needed (eg. to generate purposefully wrong answers) but if
-  you can isolate them in the 'core' verbodrome functionality that would be better. would it
-  be possible to host this as a static website?
+standalone module that is referenced / used by other apps. you may modify it to enable the
+aforementioned application if needed (eg. to generate purposefully wrong answers) but if
+you can isolate them in the 'core' verbodrome functionality that would be better. would it
+be possible to host this as a static website?
 ```
 
-It was possible. The engine stayed a standalone package, the trainer is a separate app on top of it, and the purposely wrong answers live in the trainer, not in the engine. It runs as a static site, and you can try it at [wouteronarchitecture.com/verbodrome](https://wouteronarchitecture.com/verbodrome/). You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
+There it was. Better than what I was able to build over the last 25 years, in under an hour.
+
+You can try it at [wouteronarchitecture.com/verbodrome](https://wouteronarchitecture.com/verbodrome/). The #1 feature that people kept asking but I never got around to for is also there (after one additional prompt): what kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
 
 ![Verbodrome 2026: the Dutch prompt "ik heb" over Paris, with ten French answer cards.](/assets/posts/verbodrome/verbodrome-2026-question.jpg)
 
@@ -332,7 +334,7 @@ It was possible. The engine stayed a standalone package, the trainer is a separa
 
 ## Looking back
 
-Over 25 years I must have spent well over a thousand hours on this program. The thing I wanted most from the beginning, an engine that knows the rules, now came out of one prompt and an hour of work. I find that amazing, and a little hard to take in.
+Over 25 years I must have spent well over a thousand hours on this program. The thing I wanted most from the beginning, an engine that knows the rules, now came out of one prompt and an hour of work. I find that amazing, and [it hurts a little](https://x.com/ashen_one/status/2123230920626884849/).
 
 Look at what is in that prompt, though. In the [Arius 7 post](/arius-7-and-spec-driven-development-at-scale-a-failure-mode/) I found that agents implement the domain concepts you give them and don't invent the ones you leave out. This prompt contains the one domain decision I had been carrying around since 2001: start from the rules, don't store the conjugations. The other requirements (invented verbs as the test, the Bescherelle names, the scraped corpus as test data) all come from earlier versions. Without those versions I would not have known what to ask for.
 
