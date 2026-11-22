@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'From Two Hours to 0.3 Seconds: Laying Out a Newspaper in Prolog'
-date: 2026-11-22 09:00:00
+date: 2026-11-22 08:00:00 +0100
 permalink: /newspaper-layout-in-prolog/
 subtitle: 'A 2008 internship: modelling newspaper layout as a search problem, and why the fast solution never went to production.'
 ---
