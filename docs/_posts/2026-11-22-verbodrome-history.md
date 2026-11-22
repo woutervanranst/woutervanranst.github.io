@@ -30,7 +30,7 @@ In 2000 my nickname was BlueBoy, and the programs I wrote with a few classmates 
 
 *The Blue website, November 2000: "We are two students ( almost three ) who like programming. […] don't expect us to write super-fabulous-microsoft-overwhelming stuff, but we're trying."*
 
-The product list had an encryption program called *Deep Blue*, named after [IBM's chess computer](https://en.wikipedia.org/wiki/Deep_Blue_%28chess_computer%29) that had beaten Kasparov in 1997 and that I found fascinating. Next to it were a periodic table quiz, a quiz on the capitals of Africa and *English Irregular Verbs* v1.4. That last one is the real ancestor of everything below: a list of verbs, a question, an answer, a log file.
+The product list had an encryption program called *Deep Blue* (named after [IBM's chess computer](https://en.wikipedia.org/wiki/Deep_Blue_%28chess_computer%29) that had beaten Kasparov). Next to it were a periodic table quiz, a quiz on the capitals of Africa and *English Irregular Verbs* v1.4. That last one is the real ancestor of everything below: a list of verbs, a question, an answer, a log file.
 
 Today Blue Software is the name of my company as a freelancer, a wink to the teenager who drew that square. When I incorporated in 2021, the logo was the blue square with the name in the bottom-left corner again. In 2025 it got a refresh.
 
@@ -277,7 +277,7 @@ I mailed it to a few language teachers ("Met Verbodrome geen getreur"). The last
 
 All this time the conjugations were data. Typed by hand in 2001, extracted from Le Conjugateur in 2002, scraped from websites in 2012 and 2020. In 2012 I started a `FrenchConjugator.cs` with real rules; the file in the repository is entirely commented out. The engine I asked Brewalan for in 2003 never came.
 
-This autumn I tried again, in a new repository, [woutervanranst/verbodrome](https://github.com/woutervanranst/verbodrome). This is the whole prompt I gave Claude Fable 5.2, together with a mockup I made in Claude Design:
+This autumn I tried again, in a new repository, [woutervanranst/verbodrome](https://github.com/woutervanranst/verbodrome). This is the whole prompt I gave Claude Fable 5.2 for the engine:
 
 ```
 in typescript, make a verb conjugation engine. it should start from the grammatical rules, it can hardcode the exceptions but it should not just ’store all conjugations’ - it should also work with invented verbs and correctly apply the rules
@@ -308,7 +308,19 @@ npm run cli -- nl zorpen --mood indicative --tense past --person 1 --number sing
 # ik zorpte
 ```
 
-The trainer on top of it is a static site, and you can try it at [wouteronarchitecture.com/verbodrome](https://wouteronarchitecture.com/verbodrome/). You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
+Then I designed the trainer as a mockup in Claude Design and gave Claude Fable 5.2 a second prompt:
+
+```
+Consider this Claude Design project. Implement it.
+
+the goal is that the conjugation engine (which now makes up the repository) is a
+  standalone module that is referenced / used by other apps. you may modify it to enable the
+  aforementioned application if needed (eg. to generate purposefully wrong answers) but if
+  you can isolate them in the 'core' verbodrome functionality that would be better. would it
+  be possible to host this as a static website?
+```
+
+It was possible. The engine stayed a standalone package, the trainer is a separate app on top of it, and the purposely wrong answers live in the trainer, not in the engine. It runs as a static site, and you can try it at [wouteronarchitecture.com/verbodrome](https://wouteronarchitecture.com/verbodrome/). You get a Dutch prompt and pick the French form out of ten cards. The wrong cards are not random: they are built from the engine's grammatical parts, by swapping the auxiliary, regularising the stem, putting an indicative after *que*, dropping an accent, changing the ending. So every wrong answer comes with the kind of mistake you made: *verkeerd hulpwerkwoord* (wrong auxiliary), *verkeerde stam* (wrong stem), *indicatief na que*. Telling people why their answer was wrong was the feature they asked for most, and in 25 years I never got around to it. Missed questions come back after four to eight others, and weak tenses are asked more often, the same idea as Pascale's algorithm from 2003.
 
 ![Verbodrome 2026: the Dutch prompt "ik heb" over Paris, with ten French answer cards.](/assets/posts/verbodrome/verbodrome-2026-question.jpg)
 
