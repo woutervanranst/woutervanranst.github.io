@@ -10,7 +10,7 @@ In the summer of 2008, between the first and second year of my Master in Compute
 
 That was a long time ago, but I still think about this from time to time. Part of it is about modelling: the same problem took 100 days or 6 seconds depending on how I represented it. The other part I only understood years later, and it has nothing to do with algorithms.
 
-The code, the data and the internship report are on GitHub: [woutervanranst/prolog](https://github.com/woutervanranst/prolog).
+The code, the data and the [internship report](https://github.com/woutervanranst/prolog/blob/main/Stageverslag/Stageverslag.pdf) are on GitHub: [woutervanranst/prolog](https://github.com/woutervanranst/prolog).
 
 ## The problem: the deadline is set by the layout
 
@@ -32,17 +32,17 @@ Every page starts from a master page. The yellow area in the figure below is the
 
 Journalists wrote their articles in QuarkXPress, which could render each article in several shapes: wider or narrower, a different headline, and so on. Every shape is a rectangle with a width and a height. The XML combined the pages, the ads and all the article shapes.
 
-The first sample had 4 pages, 1 ad and 66 articles, with 181 shapes in total. Each article also had a type and a preferred position. The type is a lead article (*kopstuk*, only allowed at the top of a page), a normal article, or a short article (*kortje*). The preferred position is the front, middle or back of the regional section.
+The [first sample](https://github.com/woutervanranst/prolog/blob/main/XML/data.xml) had 4 pages, 1 ad and 66 articles, with 181 shapes in total. Each article also had a type and a preferred position. The type is a lead article (*kopstuk*, only allowed at the top of a page), a normal article, or a short article (*kortje*). The preferred position is the front, middle or back of the regional section.
 
 So the problem is this: pick a subset of the articles, pick one shape for each, and place the rectangles on the pages without overlap and with as little white space as possible, while following the placement rules.
 
 ## Choosing the tool
 
-My report lists four candidates. The first was the factory layout algorithms CRAFT, ALDEP and CORELAP, which I knew from a logistics course (*Fysieke Logistiek*, Prof. Liliane Pintelon). They plan floor area with the distance between departments as the main constraint. For newspaper articles that distance does not matter, and the algorithms do not guarantee rectangles, so I dropped them.
+My [report](https://github.com/woutervanranst/prolog/blob/main/Stageverslag/Stageverslag.pdf) lists four candidates. The first was the factory layout algorithms CRAFT, ALDEP and CORELAP, which I knew from a logistics course (*Fysieke Logistiek*, Prof. Liliane Pintelon). They plan floor area with the distance between departments as the main constraint. For newspaper articles that distance does not matter, and the algorithms do not guarantee rectangles, so I dropped them.
 
 The second was linear programming. The rules can be written as linear constraints, and the objective could be the total priority of the placed articles. The downside is that an LP solver is a black box: you cannot steer how it searches. Truth be told - I also didn't understand LPs that much.
 
-The third was Prolog. Prolog has [backtracking](https://en.wikipedia.org/wiki/Backtracking) built in, so once you have one layout, asking for the next one costs almost nothing.
+The third was Prolog. Prolog has [backtracking](https://en.wikipedia.org/wiki/Backtracking) built in (when a choice leads to a dead end, Prolog undoes it, goes back to the most recent choice and tries the next option), so once you have one layout, asking for the next one costs almost nothing.
 
 The fourth was Java. The 2008 version of me rejected it for having "too much overhead" and no backtracking. I no longer agree with that. As the rest of this post shows, the speedup came from the representation and the search strategy, and those would have worked in Java too.
 
@@ -52,7 +52,7 @@ In the first days I kept thinking about how to describe a layout, and at some po
 
 ## Algorithm 1: a grid (does not scale)
 
-I started with the obvious approach. Divide the page into a grid of cells and store it as a matrix of unbound Prolog variables. Placing an article binds the cells it covers to the article id. A nice side effect: printing the matrix shows the layout.
+I started with the obvious approach ([`algoritme1.pl`](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/algoritme1.pl)). Divide the page into a grid of cells and store it as a matrix of unbound Prolog variables. Placing an article binds the cells it covers to the article id. A nice side effect: printing the matrix shows the layout.
 
 ```
  31073 31073 31073 31073 31073 31073 31073 31052 31052 .....
@@ -77,7 +77,7 @@ I called those corners *anchor points*. An empty page has four. An article can h
 
 *A page with one article. Each anchor point shows the directions in which a new article can be attached.*
 
-The other idea was a heuristic that scores a placement by how well it fits. Every side of the article that touches another article or the page border adds to the score. A touching side scores its length to the power 1.2, so one long touching side beats two short ones with the same total length (4^1.2 > 2^1.2 + 2^1.2). A side that has exactly the same length as its neighbour looks tidier, so it counts three times.
+The other idea was a [heuristic](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/versions/hln5.pl#L105-L116) that scores a placement by how well it fits. Every side of the article that touches another article or the page border adds to the score. A touching side scores its length to the power 1.2, so one long touching side beats two short ones with the same total length (4^1.2 > 2^1.2 + 2^1.2). A side that has exactly the same length as its neighbour looks tidier, so it counts three times.
 
 ![Two possible placements of the light green article. The left one fits badly, the right one fits well.](/assets/posts/newspaper-layout-in-prolog/fit-heuristic.jpg)
 
@@ -96,13 +96,15 @@ In Prolog, step 2 is a chain of choice points, and backtracking walks the tree b
 
 *The search tree of algorithm 2. The numbers give the order in which nodes are visited. The struck-through nodes fail.*
 
-With greedy search (ECLiPSe's `bb_min` picks the best candidate at every step), the 4 sample pages took 6 seconds, with 41 of the 66 articles placed.
+With [greedy search](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/versions/hln5.pl#L38-L73) (ECLiPSe's `bb_min` picks the best candidate at every step), the 4 sample pages took 6 seconds, with 41 of the 66 articles placed. This version is [`versions/hln5.pl`](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/versions/hln5.pl); [`algoritme2.pl`](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/algoritme2.pl) is the same algorithm, adapted later to the second dataset.
 
 ![Result of algorithm 2 with greedy search: four pages with lead articles at the top and an ad in the bottom-left corner of page 2.](/assets/posts/newspaper-layout-in-prolog/algorithm-2-greedy.png)
 
-*Algorithm 2, greedy search. Dark green: lead articles, green: normal articles, light green: short articles. The first number is the order of placement on the page, the second the article id. The ad sits in the bottom-left corner of page 2.*
+*Algorithm 2, greedy search. Dark green: lead articles, green: normal articles, light green: short articles. The first number is the order of placement on the page, the second the article id. The ad sits in the bottom-left corner of page 2. The layouts in this post were plotted in MATLAB with [`plotarticles.m`](https://github.com/woutervanranst/prolog/blob/main/MATLAB/plotarticles.m).*
 
-I also ran a complete search that ignores the heuristic. Its first layout came after 0.7 seconds, and it was a mess, with articles scattered and a lot of white space.
+I wrote up this approach, with a first generated layout, in a short [proposal for the newsroom](https://github.com/woutervanranst/prolog/blob/main/Paper%20Redactie/Voorstel.pdf) (in Dutch).
+
+I also ran a [complete search](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/versions/hln5.pl#L74-L103) that ignores the heuristic. Its first layout came after 0.7 seconds, and it was a mess, with articles scattered and a lot of white space.
 
 ![Result of algorithm 2 with complete search: many small articles, chaotic, with gaps.](/assets/posts/newspaper-layout-in-prolog/algorithm-2-complete.jpg)
 
@@ -112,7 +114,7 @@ I let the complete search run for 5 days. The best layout it found scored about 
 
 ### Embedding in Java
 
-XT-i only did Java projects, so I wrapped the Prolog code in a small Java program. It reads the XML, turns it into ECLiPSe terms, calls the layout predicate in an embedded ECLiPSe engine, and writes the page id, shape id and start coordinates of every article back into the XML. The page layout is then built from that XML.
+XT-i only did Java projects, so I wrapped the Prolog code in a [small Java program](https://github.com/woutervanranst/prolog/blob/main/Java/src/base/Main.java). It reads the XML, [turns it into ECLiPSe terms](https://github.com/woutervanranst/prolog/tree/main/Java/src/xmltoeclipseparser), calls the layout predicate in an embedded ECLiPSe engine, and [writes the page id, shape id and start coordinates](https://github.com/woutervanranst/prolog/tree/main/Java/src/eclipsetoxmlparser) of every article back into the XML. The page layout is then built from that XML.
 
 ## Algorithm 2.1: the newsroom rules
 
@@ -126,13 +128,13 @@ Then I visited the newsroom, and the requirements got a lot more specific:
 6. No more than two baselines of white space between articles.
 7. No two boxed articles next to or above each other, no two photos side by side, and no two headlines with the same font and size next to each other.
 
-I made the page 6 columns wide and rounded article heights to the baseline (9.6 points). The algorithm now places the ads first, then the reserved lead articles, the other lead articles, the photo articles in a staggered pattern, and finally everything else in XML order. Rules 3 and 4 fix the order of the articles and their shapes, so there is nothing left to search over there. The algorithm takes the next article and puts it on the first anchor point where it fits.
+I made the page 6 columns wide and rounded article heights to the baseline (9.6 points). The algorithm ([`algoritme21.pl`](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/algoritme21.pl#L16-L33)) now places the ads first, then the reserved lead articles, the other lead articles, the photo articles in a staggered pattern, and finally everything else in XML order. Rules 3 and 4 fix the order of the articles and their shapes, so there is nothing left to search over there. The algorithm [takes the next article](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/algoritme21.pl#L93-L135) and puts it on the first anchor point where it fits.
 
 I ran out of time before rule 7. With the rest in place, the first layout for 6 pages took 0.3 seconds.
 
 ![Result of algorithm 2.1: six pages with ads, staggered photo articles and short articles in the right column.](/assets/posts/newspaper-layout-in-prolog/algorithm-2-1.jpg)
 
-*Algorithm 2.1 on the second dataset. Ads are dark green, short articles yellow. Pages 1 and 3 show the staggered photo articles.*
+*Algorithm 2.1 on the [second dataset](https://github.com/woutervanranst/prolog/blob/main/XML/data_algoritme21.xml). Ads are dark green, short articles yellow. Pages 1 and 3 show the staggered photo articles.*
 
 I did not expect that: more rules, and the algorithm got faster. Looking back, it makes sense. Every rule removes part of the search space, and a rule that fails early sends the search to the next candidate sooner.
 
@@ -144,11 +146,11 @@ In all the versions so far, an article looks for a place. I also sketched the op
 
 *Placeholders. From left to right: a page with staggered photo articles, two columns for short articles, a block for normal articles, and the three combined.*
 
-Since every rectangle fits exactly inside a bigger one, the pages come out tidy almost by construction. It also fits constraint programming well, because each placeholder is just a set of equations on the coordinates of its rectangles. I did not get to implement it. There is a partial prototype in the repository.
+Since every rectangle fits exactly inside a bigger one, the pages come out tidy almost by construction. It also fits constraint programming well, because each placeholder is just a set of equations on the coordinates of its rectangles. I did not get to implement it. There is a partial prototype in [`algoritme3.pl`](https://github.com/woutervanranst/prolog/blob/main/ECLiPSe/algoritme3.pl).
 
 ## The result
 
-My report ends with "2 hours versus 0.3 seconds". That comparison is not fair. I had not implemented all the rules of the existing solution, and my layouts were probably not as good. Still, the gap was four orders of magnitude, and algorithm 2.1 had just shown that extra rules made my version faster, not slower.
+My [report](https://github.com/woutervanranst/prolog/blob/main/Stageverslag/Stageverslag.pdf) ends with "2 hours versus 0.3 seconds". That comparison is not fair. I had not implemented all the rules of the existing solution, and my layouts were probably not as good. Still, the gap was four orders of magnitude, and algorithm 2.1 had just shown that extra rules made my version faster, not slower.
 
 The last sentence of the report recommends turning the ECLiPSe search core into a proper component of the production system.
 
