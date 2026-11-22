@@ -2,7 +2,7 @@
 layout: post
 title: 'Verbodrome: 25 years of programming instead of learning French verbs'
 date: 2026-11-22 18:00:00 +0100
-permalink: /verbodrome/
+permalink: /verbodrome-history/
 subtitle: 'From an Excel macro in 2001 to a rule-based conjugation engine in 2026, and every technology I tried out in between.'
 ---
 
