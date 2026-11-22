@@ -10,7 +10,7 @@ In September 2001, in the fourth year of secondary school, I had to learn the *B
 
 That program kept me busy, on and off, for 25 years. It started as an Excel macro, became a Visual Basic 6 application, a .NET client/server system for the classroom, a ClickOnce desktop app, a Windows 8 Store app, a game called Angry Verbs, a couple of web apps and, this year, a conjugation engine. Every rewrite was an excuse to try a technology I wanted to learn, so in hindsight it is a decent portfolio of how I learned to program.
 
-I dug up the old backup DVDs, my mail archive from 1997 to 2007 and a handful of later repositories, and put every version I could find in one repository: [woutervanranst/verbodrome6](https://github.com/woutervanranst/verbodrome6). It has one commit per version, dated to when it was built, and a tag per release, so `git log` tells the same story as this post.
+I dug up the old backup DVDs, my mail archive from 1997 to 2007 and a handful of later repositories, and put every version I could find in one repository: [woutervanranst/verbodrome6](https://github.com/woutervanranst/verbodrome6).
 
 ## Before Verbodrome: Blue
 
@@ -166,7 +166,7 @@ The teacher started a session with a wizard: individual or shared questions, whi
 
 ![A laptop running Verboserve next to a monitor with four Verbodrome clients, and a Pocket PC.](/assets/posts/verbodrome/verbodrome-7-codegasm.jpg)
 
-*8 September 2004: Verboserve on the laptop, four stress-test clients on the monitor. The file is called Codegasm.jpg.*
+*8 September 2004: Verboserve on the laptop, four stress-test clients on the monitor.*
 
 On 13 September 2004 I installed it at my old school, on Windows 98 machines with .NET 1.1: "VERBODROME WERKT!!! (op de krotcomputers van t OLVC :-))" (it works, on the school's crappy computers). A week later, during the session where I explained it to the French teachers, it crashed: "4 weken (à 15 uur per dag) werk in minder dan een seconde in rook te zien opgaan doet pijn." (Watching four weeks of work, at 15 hours a day, go up in smoke in less than a second hurts.) University started the same week.
 
@@ -292,5 +292,3 @@ Over 25 years I must have spent well over a thousand hours on this program. The 
 Look at what is in that prompt, though. In the [Arius 7 post](/arius-7-and-spec-driven-development-at-scale-a-failure-mode/) I found that agents implement the domain concepts you give them and don't invent the ones you leave out. This prompt contains the one domain decision I had been carrying around since 2001: start from the rules, don't store the conjugations. The other requirements (invented verbs as the test, the Bescherelle names, the scraped corpus as test data) all come from earlier versions. Without those versions I would not have known what to ask for.
 
 The other thing I see now is what the project actually was. It barely made any money, the publishers turned it down and a photo ended it. But every version taught me something I used later: VBA, VB6 and Access, sockets and .NET Remoting, WinForms and ClickOnce, WinRT, WCF on Azure, AngularJS, ASP.NET Core with Azure AD B2C, and now working with agents. It was where I tried out new technology, and French verbs were the test case every time.
-
-The code of every version, from the Excel macro to the Windows 8 app, is in [woutervanranst/verbodrome6](https://github.com/woutervanranst/verbodrome6). Binaries, licence keys, personal data and verb lists scraped from other sites are left out. The README explains what is where.
