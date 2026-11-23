@@ -50,13 +50,13 @@ The Bescherelle has 88 tables. About 150 of us in the fourth year had to learn t
 
 *A question and a wrong answer. The log file shows the first session on 22 September 2001.*
 
-Only one thing was computed rather than typed. If a cell said just "avoir" or "être", the macro built the compound tense from the auxiliary and the past participle. Keep that in mind: it took 25 years to get to the next step. The code is in [`v1.1/01-bescherelle-excel`](https://github.com/woutervanranst/verbodrome6/tree/v1.1/01-bescherelle-excel), with the VBA extracted as text.
+Only one thing was computed rather than typed. If a cell said just "avoir" or "être", the macro built the compound tense from the auxiliary and the past participle. Keep that in mind: it took 25 years to get to the next step. The code is in [`01-bescherelle-excel/v1.1`](https://github.com/woutervanranst/verbodrome6/tree/main/01-bescherelle-excel/v1.1), with the VBA extracted as text.
 
 A presentation text I wrote two years later claims "the results of the tests went up considerably". I have no data to back that up.
 
 ## 2002: diskettes, VB6 and a registration server
 
-Version 2 (January 2002) got a settings window to pick the tenses and persons, points saved in the registry, a `/cheat` command ("Cheating NOT enabled... Crack the code, LÖSER") and a release on diskette, with a label.
+[Version 2](https://github.com/woutervanranst/verbodrome6/tree/main/01-bescherelle-excel/v2) (January 2002) got a settings window to pick the tenses and persons, points saved in the registry, a `/cheat` command ("Cheating NOT enabled... Crack the code, LÖSER") and a release on diskette, with a label.
 
 ![The Bescherelle v. 2 settings window with checkboxes for tenses and persons.](/assets/posts/verbodrome/bescherelle-2-settings.jpg)
 
@@ -66,15 +66,15 @@ Version 2 (January 2002) got a settings window to pick the tenses and persons, p
 
 *The diskette label, with Bescherelle in red like on the book cover.*
 
-The web page for v2 ends with "Het is vrijdagnacht, halftwee, het is koud en het regent. Ik stop ermee." (It's Friday night, half past one, it's cold and it's raining. I'm quitting.) Versions 3 to 4 followed within six weeks: a verb picker, questions in French or Dutch, the subjonctif passé, and something I called the *Blue Moon Engine*, which pre-computed the list of forms it was allowed to ask.
+The web page for v2 ends with "Het is vrijdagnacht, halftwee, het is koud en het regent. Ik stop ermee." (It's Friday night, half past one, it's cold and it's raining. I'm quitting.) Three more versions followed within six weeks: [version 3](https://github.com/woutervanranst/verbodrome6/tree/main/01-bescherelle-excel/v3) with a verb picker and questions in French or Dutch, [version 3.5](https://github.com/woutervanranst/verbodrome6/tree/main/01-bescherelle-excel/v3.5) with something I called the *Blue Moon Engine*, which pre-computed the list of forms it was allowed to ask, and [version 4](https://github.com/woutervanranst/verbodrome6/tree/main/01-bescherelle-excel/v4) with the subjonctif passé.
 
-In March 2002 version 5 was the first one in Visual Basic 6. It still asked its questions in an `InputBox`, but now came with an MSI installer, a text database and 127 verbs. The 72 extra verbs came from *Le Conjugateur*, a program by Brewalan Le Drû. I wrote an *Extra Verbes Extractor* that parsed its text exports into my format. Version 5 also contained a time bomb ("Deze versie van het programma is verlopen" after August 2002) and a routine called `BentUEenComputerAnalfabeet` that asked "Are you computer illiterate?" and then tested whether you knew the `/quit` command.
+In March 2002 [version 5](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v5) was the first one in Visual Basic 6. It still asked its questions in an `InputBox`, but now came with an MSI installer, a text database and 127 verbs. The 72 extra verbs came from *Le Conjugateur*, a program by Brewalan Le Drû. I wrote an *Extra Verbes Extractor* that parsed its text exports into my format. Version 5 also contained a time bomb ("Deze versie van het programma is verlopen" after August 2002) and a routine called `BentUEenComputerAnalfabeet` that asked "Are you computer illiterate?" and then tested whether you knew the `/quit` command.
 
 ![The setup wizard of Bescherelle v5 Bèta 2.](/assets/posts/verbodrome/bescherelle-5-installer.jpg)
 
 *Bescherelle v5, March 2002: a real installer.*
 
-Version 6 (summer 2002 to January 2003) finally had a main window. It stored its 200 verbs in an Access database and had an interface in Dutch, French and English. I also wrote a custom OCX with Winsock client and server controls so the program could register itself online against a server on my home PC, behind a dynamic DNS name. On 23 August 2002 two of my teachers, my French teacher Eric Van Hool among them, got a beta CD with a letter. A few months later the to-do list says *internetbrol wegwerken* (get rid of the internet junk), and version 6.3 shipped without online registration.
+[Version 6.0](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.0) (summer 2002) finally had a main window. [Version 6.2](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.2) stored its 200 verbs in an Access database and had an interface in Dutch, French and English. I also wrote a custom OCX with Winsock client and server controls so the program could register itself online against a server on my home PC, behind a dynamic DNS name. On 23 August 2002 two of my teachers, my French teacher Eric Van Hool among them, got a beta CD with a letter. A few months later the to-do list says *internetbrol wegwerken* (get rid of the internet junk), and [version 6.3](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.3) shipped without online registration.
 
 ![Bescherelle V6 - Probabiliteitsmanagement: per tense, how many of 100 questions should be about it.](/assets/posts/verbodrome/bescherelle-6-probability.png)
 
@@ -84,9 +84,7 @@ The probability screen became a theme. In version 6.3 it turned into *dynamic* p
 
 ## January 2003: Bescherelle becomes Verbodrome
 
-In January 2003 Eric Van Hool, by then my former French teacher, was so taken with the program that he wanted it registered. That raised an awkward point: *Bescherelle* is a trademark of the publisher Hatier. The manual of version 6.3 already said so, and added that "every request for an immediate change of name will be granted at once". I needed a name of my own, and my friend Christian Wildiers came up with it: Verbodrome. On 24 January 2003 I sent him three icons with a V to choose from, and the program was renamed the same day. In April I deposited it with SABAM, "against all your good advice", as I wrote to the other Eric in this story, who had offered me a lawyer.
-
-That other Eric was a family friend and the CEO of VANAS, a small software company. Its lead software engineer, Danny Depecker, became my mentor. So while I was still in secondary school, I had a CEO for the commercial questions and a senior developer for the technical ones. The about box of Verbodrome 6 thanks "het VANAS team" for "hun antwoord op (al) mijn vragen en onoplosbare bugs" (their answers to (all) my questions and unsolvable bugs). Years later I would work at VANAS myself.
+In January 2003 Eric Van Hool, by then my former French teacher, was so taken with the program that he wanted it registered. That raised an awkward point: *Bescherelle* is a trademark of the publisher Hatier. I needed a name of my own, and my friend Christian Wildiers came up with it: [Verbodrome](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/verbodrome-6.3). In April I deposited it with SABAM, to ensure the ownership was formally cemented with me.
 
 ![The main window of Verbodrome V6: a question, an answer field, the exercise number, score and time.](/assets/posts/verbodrome/verbodrome-6-main-window.jpg)
 
@@ -98,7 +96,7 @@ On 9 February I mailed my whole class: "GERAAK JE OOK HELEMAAL IN DE KNOOP VAN D
 
 *The deluxe edition: a binder with a printed manual and a CD. That's how it was done back then.*
 
-During 2003 the VB6 code grew from about 4,400 to almost 9,000 lines. Teachers could create exercise series and verb lists and hand them out to their pupils as files, there was a score report with a mark out of 20, an autorun CD, a 30-day trial and licence keys. Version 6.5 (October 2003) was a rewrite around classes, the folder of the build before it is called *Laatste Niet-OOP*, the last non-object-oriented one. The last VB6 release was 6.6, in January 2004. All of it is in [`02-vb6`](https://github.com/woutervanranst/verbodrome6/tree/v6.6/02-vb6), and `git diff v6.4 v6.5 -- 02-vb6` shows the rewrite.
+During 2003 the VB6 code grew from about 4,400 to almost 9,000 lines. There was a score report with a mark out of 20 and an autorun CD. With [version 6.31](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.31) teachers could create exercise series and verb lists and hand them out to their pupils as files, and [6.4](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.4) added a 30-day trial. [Version 6.5](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.5) (October 2003) was a rewrite around classes, with licence keys. The build before it, [6.5 beta](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.5-beta), sat in a folder called *Laatste Niet-OOP*, the last non-object-oriented one; put the two side by side to see the rewrite. [Version 6.51](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.51) added local user profiles, and the last VB6 release was [6.6](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.6), in January 2004. All of them are in [`02-vb6`](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6).
 
 ![The session creator: pick a verb, tense and person and build a list of questions.](/assets/posts/verbodrome/verbodrome-6-session-creator.png)
 
@@ -158,7 +156,7 @@ In June 2004 I tried to license an engine for a multilingual version. I offered 
 
 ## 2004: the classroom server
 
-The idea for a network version came from An: a teacher should be able to follow the whole class from one screen. In October 2003 I wrote my first C# code, a console server on port 6000 with one thread per client and a line-based text protocol, and gave Verbodrome 6.6 a network client to talk to it. On 20 October I mailed An the first handshake, "het ontspruiten van uw gedachtegoed" (your idea, sprouting):
+The idea for a network version came from An: a teacher should be able to follow the whole class from one screen. In October 2003 I wrote [my first C# code](https://github.com/woutervanranst/verbodrome6/tree/main/03-verboserve-2003/verboserve-2003): a console server on port 6000 with one thread per client and a line-based text protocol, a GUI version called VerboServe, and on the side *Konjugator*, a small trainer for German verbs. The [Verbodrome 6.6 beta](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.6-beta) got a network client to talk to it. On 20 October I mailed An the first handshake, "het ontspruiten van uw gedachtegoed" (your idea, sprouting):
 
 ```
 CS: AUTH_REQUEST Verbodrome Build 6500.20031007
@@ -171,7 +169,9 @@ SC[0]: AUTH_AUTHENCITATED USERNBR 1 BUILD BETA
 
 "De eerste communicatie tussen Verbodrome-server en Verbodrome-client: de aanmeldprocedure!!!!!" (The first communication between Verbodrome server and client: the login procedure!) The spelling of `AUTHENCITATED` is original. Authentication is hard.
 
-Danny had told me: "VB6 is over, .NET Framework and C# are the new kids on the block." So naturally I wanted to try that, and in the summer of 2004, after my final exams, I rewrote everything in C# on .NET 1.1: Verbodrome 7 for the pupils, Verboserve 7 for the teacher, and a shared library, *Verbosystem*, code name *Bellerophone* (a reference to *Mission: Impossible 2*). It used .NET Remoting over TCP. The pupil's session lived on the server as a `MarshalByRefObject`, and the client was "only a thin shell" that showed what the server sent. The draft website said: "Twee jaar expertise. Een half jaar ontwerptafel. Een maand ontwikkeling. Verbodrome 7 is een feit." (Two years of expertise. Half a year at the drawing board. One month of development.)
+The server grew into [Verboserve 6](https://github.com/woutervanranst/verbodrome6/tree/main/03-verboserve-2003/verboserve-6), with an Access database, and a [later 6.6 build](https://github.com/woutervanranst/verbodrome6/tree/main/02-vb6/v6.6-network) of the VB6 client got a login screen for it.
+
+Danny had told me: "VB6 is over, .NET Framework and C# are the new kids on the block." So naturally I wanted to try that, and in the summer of 2004, after my final exams, I rewrote everything in C# on .NET 1.1 (a [prototype](https://github.com/woutervanranst/verbodrome6/tree/main/04-verbodrome7/v7-preview) in August, [version 7.0.1](https://github.com/woutervanranst/verbodrome6/tree/main/04-verbodrome7/v7.0.1) in September): Verbodrome 7 for the pupils, Verboserve 7 for the teacher, and a shared library, *Verbosystem*, code name *Bellerophone* (a reference to *Mission: Impossible 2*). It used .NET Remoting over TCP. The pupil's session lived on the server as a `MarshalByRefObject`, and the client was "only a thin shell" that showed what the server sent. The draft website said: "Twee jaar expertise. Een half jaar ontwerptafel. Een maand ontwikkeling. Verbodrome 7 is een feit." (Two years of expertise. Half a year at the drawing board. One month of development.)
 
 ![Verboserve 7: per pupil the list of questions with right and wrong answers, coloured from red to green, and a table per tense.](/assets/posts/verbodrome/verboserve-7-session-report.png)
 
@@ -191,17 +191,17 @@ The teacher started a session with a wizard: individual or shared questions, whi
 
 On 13 September 2004 I installed it at my old school, on Windows 98 machines with .NET 1.1: "VERBODROME WERKT!!! (op de krotcomputers van t OLVC :-))" (it works, on the school's crappy computers). A week later, during the session where I explained it to the French teachers, it crashed: "4 weken (à 15 uur per dag) werk in minder dan een seconde in rook te zien opgaan doet pijn." (Watching four weeks of work, at 15 hours a day, go up in smoke in less than a second hurts.) University started the same week.
 
-In April 2005 I opened the code again: "Tot mijn groot spijt/verdriet/woede/onmacht/frustratie versta ik niets meer van mijn code." (To my great regret/sorrow/anger/helplessness/frustration I no longer understand any of my code.) Danny answered: "Programmeren <=> Studeren ... het 2de moet nu." (Programming versus studying, the second one has to happen now.) A file called `Final Notes.txt`, dated 13 August 2005, ends it: "onopgeloste bug, te grootschalig, te weinig tijd" (unsolved bug, too large, too little time). The code is under [`v7-final/04-verbodrome7`](https://github.com/woutervanranst/verbodrome6/tree/v7-final/04-verbodrome7).
+In April 2005 I opened the code again: "Tot mijn groot spijt/verdriet/woede/onmacht/frustratie versta ik niets meer van mijn code." (To my great regret/sorrow/anger/helplessness/frustration I no longer understand any of my code.) Danny answered: "Programmeren <=> Studeren ... het 2de moet nu." (Programming versus studying, the second one has to happen now.) A file called `Final Notes.txt`, dated 13 August 2005, ends it: "onopgeloste bug, te grootschalig, te weinig tijd" (unsolved bug, too large, too little time). The code is in [`04-verbodrome7/v7-final`](https://github.com/woutervanranst/verbodrome6/tree/main/04-verbodrome7/v7-final).
 
 ## 2006: Verbodrome 8
 
-In September 2006, at the start of my third year at KU Leuven, a parent who had bought a licence in 2004, asked for a new key. He thought I had stopped. I sent him the key generator, and two months later, "in een ambitieuze bui" (in an ambitious mood), I had a new version: Verbodrome 8, a standalone C# WinForms app on .NET 2.0 with SQL Server 2005 Express, installed with ClickOnce. Licences were XML files signed with an RSA (another obsession of mine) key: you mailed your licence request, I signed it and mailed it back. "Programmeren tot 5 uur smorgends is zalig." (Programming until 5 in the morning is bliss.)
+In September 2006, at the start of my third year at KU Leuven, a parent who had bought a licence in 2004, asked for a new key. He thought I had stopped. I sent him the key generator, and two months later, "in een ambitieuze bui" (in an ambitious mood), I had a new version: [Verbodrome 8](https://github.com/woutervanranst/verbodrome6/tree/main/05-verbodrome8/v8-vs2005), a standalone C# WinForms app on .NET 2.0 with SQL Server 2005 Express, installed with ClickOnce. Licences were XML files signed with an RSA (another obsession of mine) key: you mailed your licence request, I signed it and mailed it back. "Programmeren tot 5 uur smorgends is zalig." (Programming until 5 in the morning is bliss.)
 
 ![An unhandled SqlException in Verbodrome 8: Incorrect syntax near 'appeler'.](/assets/posts/verbodrome/verbodrome-8-sql-apostrophe-bug.jpg)
 
 *Verbodrome 8, 30 November 2006. The verb was* s'appeler*, and the apostrophe ended up in a SQL string. A textbook SQL injection, by a French verb.*
 
-I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastián and needed to train Spanish verbs myself. Along the way I moved to Visual Studio 2008, inside a Windows VM on a Mac (I bought one because of the Vista debacle). A tester was honest: "eigenlijk komt het er op neer dat de vorige versie beter was" (it comes down to the previous version being better). The installation was too heavy, the colours too loud. And about the planned price of €5 a year: "zwier die 5 euro van de website" (throw that €5 off the website). The last build is from March 2008. There never was a final release.
+I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastián and needed to train Spanish verbs myself. Along the way I [moved to Visual Studio 2008](https://github.com/woutervanranst/verbodrome6/tree/main/05-verbodrome8/v8-vs2008), inside a Windows VM on a Mac (I bought one because of the Vista debacle). A tester was honest: "eigenlijk komt het er op neer dat de vorige versie beter was" (it comes down to the previous version being better). The installation was too heavy, the colours too loud. And about the planned price of €5 a year: "zwier die 5 euro van de website" (throw that €5 off the website). The last build is from March 2008. There never was a final release.
 
 ![The Verbodrome 8 score report on a green background: 16 out of 21.](/assets/posts/verbodrome/verbodrome-8-score-report.png)
 
@@ -209,13 +209,13 @@ I added German and, in December 2007, Spanish: I was on Erasmus in San Sebastiá
 
 ## 2012: Windows 8
 
-From 2011 to 2014 I worked at Microsoft as a solution sales for Windows 8, so in the summer of 2012 Verbodrome became a Windows 8 Store app: Verbodrome 9, C# and XAML on WinRT, with a home-made MVVM layer and the score colour still in the background.
+From 2011 to 2014 I worked at Microsoft as a solution sales for Windows 8, so in the summer of 2012 Verbodrome became a Windows 8 Store app: [Verbodrome 9](https://github.com/woutervanranst/verbodrome6/tree/main/06-verbodrome9-windows8/v9.1), C# and XAML on WinRT, with a home-made MVVM layer and the score colour still in the background.
 
 ![Verbodrome 9: a green full-screen question, Geef de conditionnel présent van asseoir in de 1e pers. enk.](/assets/posts/verbodrome/verbodrome-9-question.png)
 
 *Verbodrome 9, September 2012.*
 
-It supported five languages: French, German, Spanish, English and Latin. The verbs came from a `Parser` console app that downloaded conjugation pages from five websites and turned them into XML. Still a list, just a longer one.
+It supported five languages: French, German, Spanish, English and Latin. The verbs came from a [`Parser`](https://github.com/woutervanranst/verbodrome6/tree/main/06-verbodrome9-windows8/v9-post/Parser) console app that downloaded conjugation pages from five websites and turned them into XML. Still a list, just a longer one.
 
 ![Pick your exercises: languages, verbs and tenses, with flags for German, English and Spanish.](/assets/posts/verbodrome/verbodrome-9-pick-exercises.png)
 
@@ -229,17 +229,19 @@ The feedback page grew from one case to five: first time right, first time wrong
 
 *"You gave the gérondif passé of plaire (instead of pouvoir)."*
 
-The app cost €2.60 or $3.49 with a free trial. The first sale came on 22 October 2012, four days before Windows 8 went on sale in the shops. The sales export of May 2013 has 25 transactions, one of them a refund. For teachers I built a backend on Azure Cloud Services (WCF on an ExtraSmall web role, two instances) that served teacher profiles: type a code in the app and you get your teacher's selection of verbs and tenses. The source went into the Team Foundation Service preview. It is all under [`v9-post`](https://github.com/woutervanranst/verbodrome6/tree/v9-post/06-verbodrome9-windows8) and [`verboserve-azure`](https://github.com/woutervanranst/verbodrome6/tree/verboserve-azure/07-verboserve-azure-2012).
+From [version 9.2](https://github.com/woutervanranst/verbodrome6/tree/main/06-verbodrome9-windows8/v9.2) on, the app cost €2.60 or $3.49 with a free trial. The first sale came on 22 October 2012, four days before Windows 8 went on sale in the shops. The sales export of May 2013 has 25 transactions, one of them a refund.
+
+I proudly showed the Store app to Mitch Cap, a colleague at Microsoft. His first question: "But does it run on Azure yet?" It didn't. A few weeks later Verboserve was back, this time as [WCF services on Azure Cloud Services](https://github.com/woutervanranst/verbodrome6/tree/main/07-verboserve-azure-2012) (an ExtraSmall web role, two instances). It served teacher profiles: type a code in the app and you get your teacher's selection of verbs and tenses. That was the [last Windows 8 version](https://github.com/woutervanranst/verbodrome6/tree/main/06-verbodrome9-windows8/v9-post). The source went into the Team Foundation Service preview.
 
 ## 2013-2015: Angry Verbs, and a photo of Berlin
 
-Version 10 got a new name: Angry Verbs. Those were the days of Angry Birds and Flappy Bird, when every app seemed to need a bird or a face, so the logo became a `>_<` face. The file is dated 11 February 2014, two days after Flappy Bird was pulled from the App Store.
+Version 10 got a new name, inspired by Angry Birds: Angry Verbs, with a `>_<` face as logo.
 
-![The Flappy Bird logo.](/assets/posts/verbodrome/flappy-bird-logo.png)
+![The Angry Birds app icon: a red bird with angry eyebrows.](/assets/posts/verbodrome/angry-birds-logo.png)
 
-*[Flappy Bird](https://en.wikipedia.org/wiki/Flappy_Bird), the game everybody was playing that winter.*
+*The inspiration: [Angry Birds](https://en.wikipedia.org/wiki/Angry_Birds).*
 
-There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, and a Teacher mode. Later it also became a website on Azure, which is how I learned AngularJS. Every language got a background photo: the Eiffel Tower, Big Ben, Amsterdam canals, the Roman Forum, Berlin.
+There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, and a Teacher mode. Only one page of its code survived: the [campaign page](https://github.com/woutervanranst/verbodrome6/tree/main/08-angry-verbs-2012). Later it also became a website on Azure, which is how I learned AngularJS. Every language got a background photo: the Eiffel Tower, Big Ben, Amsterdam canals, the Roman Forum, Berlin.
 
 ![The Angry Verbs logo: a white >_< on blue.](/assets/posts/verbodrome/angry-verbs-logo.png)
 
@@ -269,7 +271,7 @@ I mailed it to a few language teachers ("Met Verbodrome geen getreur"). The last
 
 ## 2026: an engine, finally
 
-All this time the conjugations were data. Typed by hand in 2001, extracted from websites thereafter. In 2012 I started a `FrenchConjugator.cs` with real rules; but never got it to work. It was an itch that needed scratching for 25 years.
+All this time the conjugations were data. Typed by hand in 2001, extracted from websites thereafter. In 2012 I started a [`FrenchConjugator.cs`](https://github.com/woutervanranst/verbodrome6/blob/main/06-verbodrome9-windows8/v9-post/Verbodrome/Business/Conjugators/FrenchConjugator.cs) with real rules, but never got it to work. In June 2025, trying out Codex, I let it [port Verbodrome 6 to a .NET console app](https://github.com/woutervanranst/verbodrome6/tree/main/09-verbodrome-modern-2025); its conjugator only knew the regular verbs. It was an itch that needed scratching for 25 years.
 
 So I gave Fable 5.1 this crappy prompt:
 
