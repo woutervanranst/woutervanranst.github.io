@@ -6,7 +6,7 @@ permalink: /verbodrome-history/
 subtitle: 'From an Excel macro in 2001 to a rule-based conjugation engine in 2026, and every technology I tried out in between.'
 ---
 
-In September 2001, in the fourth year of secondary school, I had to learn the *Bescherelle* by heart. The Bescherelle is the little French book with a conjugation table for every model verb, and our French teachers wanted us to know it by heart. I thought it was the perfect excuse to *write a program that would quiz me* rather than learn the verbs.
+In September 2001, in the fourth year of secondary school, I had to learn the *Bescherelle* by heart. The Bescherelle is the little French book with a conjugation table for every model verb, and our French teachers wanted us to drill it. I thought it was the perfect excuse to *write a program that would quiz me* rather than learn the verbs.
 
 ![The green Bescherelle, La Conjugaison pour tous, published by Hatier.](/assets/posts/verbodrome/bescherelle-book.jpg)
 
@@ -18,9 +18,7 @@ I dug up the old backups, my mail archive from 1997 to 2007 and a handful of lat
 
 ## Before Verbodrome: Blue
 
-I started programming in DOS batch files when I was seven. By 1999 I was writing Visual Basic under the alias *Vengakid* (the Vengaboys were big) and reading the computer magazine *Netwerk*, which I called *mijn lijfblad*, my bible. Four years later that magazine would write about me.
-
-In 2000 my nickname was BlueBoy, and the programs I wrote with a few classmates needed a publisher. So we invented one: *Blue®*. The logo was a blue square with the name in white in the bottom-left corner. It was a play on the then just-launched third mobile operator in Belgium, Orange (after Proximus and Mobistar). It was an ad in the bus stop I took to school. I changed the color and the name and I thought that was very clever.
+I started programming in DOS batch files when I was seven. And by 1999 I needed a nickname for [ICQ](https://en.wikipedia.org/wiki/ICQ): BlueBoy (a reference to [this song](https://www.youtube.com/watch?v=fKKNPLowteY), and the programs I wrote with a few classmates needed a publisher. So we invented one: *Blue®*. The logo was a blue square with the name in white in the bottom-left corner. It was a play on the then just-launched third mobile operator in Belgium, Orange (after Proximus and Mobistar). It was an ad in the bus stop I took to school. I changed the color and the name and I thought that was very clever.
 
 ![The Orange logo: an orange square with the name in white in the bottom-left corner.](/assets/posts/verbodrome/orange-logo.png)
 
@@ -142,13 +140,13 @@ Looking back, Van In and Visiria were right. A drill for verbs alone is a featur
 
 ## Blue Software Corporation
 
-By then Blue had become *Blue Software Corporation*, with a website at `users.pandora.be/bluesoftware` (`/blue` was taken by somebody who put up pictures of Braveheart), the slogan "Software is Architecture", a news page, a support centre and a merchandising page.
+By then I had renamed Blue to *Blue Software Corporation*, with a website at `users.pandora.be/bluesoftware` (`/blue` was taken by somebody who put up pictures of Braveheart), the slogan "Software is Architecture", a news page, a support centre and a merchandising page.
 
 ![The merchandising page: a T-shirt with the Blue logo, S €9,99, L €12,99, XL €14,99.](/assets/posts/verbodrome/blue-website-merchandising.png)
 
 *Blue Software T-shirts, 2003. Clickx noticed them too.*
 
-There were T-shirts with the blue square on the chest, in three sizes. Under "About Blue" a draft page said: "Onze software is onmenselijk: hij moet niet gereboot worden elke 24 uur." (Our software is inhuman: it doesn't need a reboot every 24 hours.)
+There were T-shirts with the blue square on the chest, in three sizes. Larger sizes were more expensive, because they had more fabric - obviously. Under "About Blue" a draft page said: "Onze software is onmenselijk: hij moet niet gereboot worden elke 24 uur." (Our software is inhuman: it doesn't need a reboot every 24 hours.)
 
 ## The engine I couldn't have
 
@@ -251,13 +249,13 @@ There was an Arcade mode, a Campaign with levels, stars and padlocks per mood, a
 
 *Angry Verbs: the logo (2014), the game modes and the campaign.*
 
-The photo for German was a Berlin skyline at dusk. I found it by googling "Berlin", where it was the fourth result, and it appeared on hundreds of other sites without any copyright notice. In 2015 a letter came from a Berlin lawyer (dare I say [extortionist](https://hoesmann.legal/bickel-copyright-infringement-warning/)) at Photoclaim, on behalf of the photographer. By July 2015 the claim was €1,253, with a calculation of what a court case at the District Court of Berlin would cost on top. I took the site down and, after a lot of stress and my first contact with a real lawyer, settled for €200.
+The photo for German was a Berlin skyline at dusk. I found it by googling "Berlin", and just took a picture. But in 2015 I received a letter came from a German lawyer (dare I say [extortionist](https://hoesmann.legal/bickel-copyright-infringement-warning/)) threatening to sue me for €1,253. I took the site down and, after a lot of stress and my first contact with a real lawyer, settled for €200.
 
 Looking back, it is a bit ridiculous: €200 for a photo, and the end of a project I had carried since secondary school. I didn't put Angry Verbs back online.
 
 ## 2020: VerbodromeX
 
-During the 2020 lockdowns pupils were practising at home, and I picked it up once more. For some time, I wanted to give .NET Core a spin, but the pre-3.0 versions were lacking in authentication. VerbodromeX ran on `verbodrome.eu`: ASP.NET Core 3.1 Razor Pages, Entity Framework Core, an Azure App Service with swap slots, Azure AD B2C, Application Insights, and a Let's Encrypt certificate I had to renew by hand. The parsers now scraped seven languages.
+During the 2020 lockdowns pupils were practising at home, and I picked it up once more. For some time, I had wanted to give .NET Core a spin, but the pre-3.0 versions were lacking in authentication. VerbodromeX ran on `verbodrome.eu`: ASP.NET Core 3.1 Razor Pages, Entity Framework Core, an Azure App Service with swap slots, Azure AD B2C, Application Insights, and a Let's Encrypt certificate I had to renew by hand. The parsers now scraped seven languages.
 
 Two things were new. Questions became multiple choice, asked from a Dutch prompt. And the score page analysed your mistakes: *Deze tijden verwar je regelmatig*, these tenses you mix up regularly. That was an idea from a mind map I drew in February 2003 and never built.
 
